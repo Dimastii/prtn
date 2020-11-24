@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/cveeta/CLionProjects/untitled1/ft_printf.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/ft_printf.c.o"
+  "/Users/cveeta/CLionProjects/untitled1/ft_printf_lets_parse.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/ft_printf_lets_parse.c.o"
   "/Users/cveeta/CLionProjects/untitled1/ft_printf_utils.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/ft_printf_utils.c.o"
   "/Users/cveeta/CLionProjects/untitled1/main.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/main.c.o"
   )

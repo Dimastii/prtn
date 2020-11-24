@@ -20,11 +20,12 @@ typedef struct ssf
 	unsigned char	flags;
 	unsigned int	width;
 	unsigned int	precision;
-	unsigned int	type;
+	unsigned char	type;
 
 } s_s_f;
-void		ft_printf(const char *fmt, ...);
+int			ft_printf(const char *fmt, ...);
 int			ft_isdigit(int c);
 int			ft_atoi(const char *str);
+char		*lets_parse(char *str, s_s_f *struct_, va_list *ap);
 
 #endif
