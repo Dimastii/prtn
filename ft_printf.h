@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 12:25:38 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/25 12:25:38 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/11/26 16:27:28 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ typedef struct ssf
 {
 	unsigned char	flags;
 	unsigned int	width;
-	unsigned int	precision;
+	int				precision;
 	unsigned char	type;
 
 } s_s_f;
+
 int			ft_printf(const char *fmt, ...);
 int			ft_isdigit(int c);
 int			ft_atoi(const char *str);

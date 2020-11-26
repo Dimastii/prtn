@@ -6,21 +6,23 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:08:12 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/24 19:44:45 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/11/26 14:42:23 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*check_type(char **str, s_s_f **struct_)
+void	check_type(char **str, s_s_f **struct_)
 {
 	if (**str == 'd')
 		(*struct_)->type = 'd';
-	if (**str == 's')
+	else if (**str == 's')
 		(*struct_)->type = 's';
-	if (**str == 'c')
+	else if (**str == 'c')
 		(*struct_)->type = 'c';
-	return (*str);// return особо нигде не нужен в чекерах
+	else
+		return ;
+	++*str;
 }
 
 void	check_reed_precision(char **str, s_s_f **struct_, va_list **ap)
@@ -70,8 +72,7 @@ char	*lets_parse(char *str, s_s_f *struct_, va_list *ap)
 		check_flags(&str, &struct_);
 		check_reed_width(&str, &struct_, &ap);
 		check_reed_precision(&str, &struct_, &ap);
-		str = check_type(&str, &struct_);
-		str++;
+		check_type(&str, &struct_);
 	}
 	return (str);
 }
