@@ -15,10 +15,11 @@
 char	*check_type(char **str, s_s_f **struct_)
 {
 	if (**str == 'd')
-	{
-		(*struct_)->type = 1;
-		//++(*str);
-	}
+		(*struct_)->type = 'd';
+	if (**str == 's')
+		(*struct_)->type = 's';
+	if (**str == 'c')
+		(*struct_)->type = 'c';
 	return (*str);// return особо нигде не нужен в чекерах
 }
 

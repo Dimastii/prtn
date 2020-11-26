@@ -12,7 +12,18 @@
 
 #include "ft_printf.h"
 
-int		ft_isdigit(int c)
+
+size_t		ft_strlen(const char *s)
+{
+	size_t	len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
+}
+
+int			ft_isdigit(int c)
 {
 	if (c <= '9' && c >= '0')
 		return (1);

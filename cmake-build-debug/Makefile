@@ -224,6 +224,33 @@ ft_printf_utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ft_printf_utils.c.s
 .PHONY : ft_printf_utils.c.s
 
+lets_check_what_you_pars.o: lets_check_what_you_pars.c.o
+
+.PHONY : lets_check_what_you_pars.o
+
+# target to build an object file
+lets_check_what_you_pars.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/lets_check_what_you_pars.c.o
+.PHONY : lets_check_what_you_pars.c.o
+
+lets_check_what_you_pars.i: lets_check_what_you_pars.c.i
+
+.PHONY : lets_check_what_you_pars.i
+
+# target to preprocess a source file
+lets_check_what_you_pars.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/lets_check_what_you_pars.c.i
+.PHONY : lets_check_what_you_pars.c.i
+
+lets_check_what_you_pars.s: lets_check_what_you_pars.c.s
+
+.PHONY : lets_check_what_you_pars.s
+
+# target to generate assembly for a file
+lets_check_what_you_pars.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/lets_check_what_you_pars.c.s
+.PHONY : lets_check_what_you_pars.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -269,6 +296,9 @@ help:
 	@echo "... ft_printf_utils.o"
 	@echo "... ft_printf_utils.i"
 	@echo "... ft_printf_utils.s"
+	@echo "... lets_check_what_you_pars.o"
+	@echo "... lets_check_what_you_pars.i"
+	@echo "... lets_check_what_you_pars.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

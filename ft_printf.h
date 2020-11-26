@@ -1,6 +1,14 @@
-//
-// Created by Cloyster Veeta on 11/19/20.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/25 12:25:38 by cveeta            #+#    #+#             */
+/*   Updated: 2020/11/25 12:25:38 by cveeta           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 #define FT_PRINTF_H
@@ -10,10 +18,10 @@
 # define FLG_ZERO	0b00000010
 
 
-#include "stdarg.h"
-#include "stdio.h"
-#include "stdlib.h"
-#include "unistd.h"
+# include "stdarg.h"
+# include "stdio.h"
+# include "stdlib.h"
+# include "unistd.h"
 
 typedef struct ssf
 {
@@ -26,6 +34,8 @@ typedef struct ssf
 int			ft_printf(const char *fmt, ...);
 int			ft_isdigit(int c);
 int			ft_atoi(const char *str);
+size_t		ft_strlen(const char *str);
 char		*lets_parse(char *str, s_s_f *struct_, va_list *ap);
+void		lets_check_what_you_fuck_SpArSiL(char *str, s_s_f *struct_, va_list *ap);
 
 #endif
