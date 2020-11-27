@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:08:12 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/26 14:42:23 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/11/27 15:54:42 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,18 @@ void	check_reed_precision(char **str, s_s_f **struct_, va_list **ap)
 	if (**str == '.')
 	{
 		if (*(++*str) == '*')
+		{
 			(*struct_)->precision = va_arg(**ap, int);
-		else
-		(*struct_)->precision = ft_atoi(*str);
-		while (ft_isdigit(**str))
 			++*str;
+		}
+		else if (ft_isdigit(**str))
+		{
+			(*struct_)->precision = ft_atoi(*str);
+			while (ft_isdigit(**str))
+				++*str;
+		}
+		else
+			(*struct_)->precision = 0;
 	}
 }
 
@@ -50,7 +57,7 @@ void	check_reed_width(char **str, s_s_f **struct_, va_list **ap)
 	if (**str == '*') {
 		(*struct_)->width = va_arg(**ap, int);
 		++*str;
-	}// над этой функциеей можно ещё покумекать но вроде работает
+	}
 }
 
 void	check_flags(char **str, s_s_f **struct_)

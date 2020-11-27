@@ -6,13 +6,13 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 16:52:25 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/26 14:47:30 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/11/27 14:51:43 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void 			lets_null(s_s_f *struct_)
+void	lets_null(s_s_f *struct_)
 {
 	struct_->flags = 0;
 	struct_->width = 0;
@@ -33,7 +33,7 @@ int		ft_printf(const char *str, ...)
 		{
 			lets_null(&struct_);
 			strTemp = lets_parse(strTemp, &struct_, &ap);
-			lets_check_what_you_fuck_SpArSiL(strTemp, &struct_, &ap);
+			lets_check_what_you_fuck_SpArSiL(&struct_, &ap);
 		}
 		else
 			write(1, strTemp++, 1);

@@ -37,6 +37,6 @@ int			ft_isdigit(int c);
 int			ft_atoi(const char *str);
 size_t		ft_strlen(const char *str);
 char		*lets_parse(char *str, s_s_f *struct_, va_list *ap);
-void		lets_check_what_you_fuck_SpArSiL(char *str, s_s_f *struct_, va_list *ap);
+void		lets_check_what_you_fuck_SpArSiL(s_s_f *struct_, va_list *ap);
 
 #endif

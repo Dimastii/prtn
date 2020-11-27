@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 12:16:42 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/26 17:40:25 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/11/27 15:54:42 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	reed_write_type_s(char *str, s_s_f struct_)
 
 	if (!str)
 		str = "(null)";
-	else if ((struct_.precision == -1) || struct_.precision > (int)ft_strlen(str))
+	if ((struct_.precision < 0) || struct_.precision > (int)ft_strlen(str))
 		struct_.precision = ft_strlen(str);
 	i = struct_.precision;
 	if (!(struct_.flags & FLG_MINUS) && (struct_.width))
@@ -30,11 +30,10 @@ void	reed_write_type_s(char *str, s_s_f struct_)
 			write(1, " ", 1);
 }
 
-void 	lets_check_what_you_fuck_SpArSiL(char *str, s_s_f *struct_, va_list *ap)
+void 	lets_check_what_you_fuck_SpArSiL(s_s_f *struct_, va_list *ap)
 {
 	if (struct_->type == 'd'){}
 	if (struct_->type == 's') {
 		reed_write_type_s(va_arg(*ap, char*), *struct_);
 	}
-	str = str + 1 - 1;
 }
