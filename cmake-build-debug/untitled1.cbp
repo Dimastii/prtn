@@ -96,6 +96,9 @@
 		<Unit filename="/Users/cveeta/CLionProjects/untitled1/main.c">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_s.c">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/Users/cveeta/CLionProjects/untitled1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

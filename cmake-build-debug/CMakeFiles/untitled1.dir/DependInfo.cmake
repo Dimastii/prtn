@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/cveeta/CLionProjects/untitled1/ft_printf_utils.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/ft_printf_utils.c.o"
   "/Users/cveeta/CLionProjects/untitled1/lets_check_what_you_pars.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/lets_check_what_you_pars.c.o"
   "/Users/cveeta/CLionProjects/untitled1/main.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/main.c.o"
+  "/Users/cveeta/CLionProjects/untitled1/write_s.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/write_s.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

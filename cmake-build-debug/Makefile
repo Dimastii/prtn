@@ -278,6 +278,33 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/main.c.s
 .PHONY : main.c.s
 
+write_s.o: write_s.c.o
+
+.PHONY : write_s.o
+
+# target to build an object file
+write_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_s.c.o
+.PHONY : write_s.c.o
+
+write_s.i: write_s.c.i
+
+.PHONY : write_s.i
+
+# target to preprocess a source file
+write_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_s.c.i
+.PHONY : write_s.c.i
+
+write_s.s: write_s.c.s
+
+.PHONY : write_s.s
+
+# target to generate assembly for a file
+write_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_s.c.s
+.PHONY : write_s.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -302,6 +329,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... write_s.o"
+	@echo "... write_s.i"
+	@echo "... write_s.s"
 .PHONY : help
 
 

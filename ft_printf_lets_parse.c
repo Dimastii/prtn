@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:08:12 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/27 15:54:42 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/11/27 16:34:41 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	check_type(char **str, s_s_f **struct_)
 		(*struct_)->type = 's';
 	else if (**str == 'c')
 		(*struct_)->type = 'c';
+	else if (**str == 'c')
+		(*struct_)->type = '%';
 	else
 		return ;
 	++*str;
@@ -66,6 +68,12 @@ void	check_flags(char **str, s_s_f **struct_)
 		(*struct_)->flags = (*struct_)->flags | FLG_MINUS;
 	else if (**str == '0')
 		(*struct_)->flags = (*struct_)->flags | FLG_ZERO;
+	else if (**str == ' ')
+		(*struct_)->flags = (*struct_)->flags | FLG_SPACE;
+	else if (**str == '#')
+		(*struct_)->flags = (*struct_)->flags | FLG_FENCE;
+	else if (**str == '+')
+		(*struct_)->flags = (*struct_)->flags | FLG_PLUS;
 	else
 		return ;
 	++*str;

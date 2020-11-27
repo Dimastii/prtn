@@ -16,3 +16,6 @@ CMakeFiles/untitled1.dir/lets_check_what_you_pars.c.o: ../lets_check_what_you_pa
 CMakeFiles/untitled1.dir/main.c.o: ../ft_printf.h
 CMakeFiles/untitled1.dir/main.c.o: ../main.c
 
+CMakeFiles/untitled1.dir/write_s.c.o: ../ft_printf.h
+CMakeFiles/untitled1.dir/write_s.c.o: ../write_s.c
+

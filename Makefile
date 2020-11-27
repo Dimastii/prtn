@@ -14,7 +14,7 @@ NAME	= libftprintf.a
 CC      = gcc
 CFLAGS  = -Wall -Wextra -Werror
 RM	= rm -f
-SRCS	=	ft_printf_lets_parse.c ft_printf_utils.c ft_printf.c lets_check_what_you_pars.c
+SRCS	=	ft_printf_lets_parse.c ft_printf_utils.c ft_printf.c lets_check_what_you_pars.c write_s.c
 OBJ	= $(SRCS:.c=.o)
 BONUS_OBJ	= $(BONUS:.c=.o)
 all:	$(NAME)
