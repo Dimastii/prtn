@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:08:12 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/27 16:34:41 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/11/28 16:39:24 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	check_type(char **str, s_s_f **struct_)
 		(*struct_)->type = 's';
 	else if (**str == 'c')
 		(*struct_)->type = 'c';
-	else if (**str == 'c')
+	else if (**str == '%')
 		(*struct_)->type = '%';
 	else
 		return ;
@@ -64,6 +64,7 @@ void	check_reed_width(char **str, s_s_f **struct_, va_list **ap)
 
 void	check_flags(char **str, s_s_f **struct_)
 {
+	//printf("1!!!%d <-----> %s!!!\n", (*struct_)->flags, *str);
 	if (**str == '-')
 		(*struct_)->flags = (*struct_)->flags | FLG_MINUS;
 	else if (**str == '0')

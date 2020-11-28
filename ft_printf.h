@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 12:25:38 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/27 16:27:58 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/11/28 17:57:38 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,14 @@ typedef struct ssf
 int			ft_printf(const char *fmt, ...);
 int			ft_isdigit(int c);
 int			ft_atoi(const char *str);
+char		*ft_itoa(int n);
 size_t		ft_strlen(const char *str);
 char		*lets_parse(char *str, s_s_f *struct_, va_list *ap);
 void		lets_check_what_you_fuck_SpArSiL(s_s_f *struct_, va_list *ap);
 void		write_type_s(char *str, s_s_f struct_);
+void		write_type_percent(s_s_f struct_);
+void		write_type_char(char c, s_s_f struct_);
+void		write_type_d(long long int num, s_s_f struct_);
+
 
 #endif

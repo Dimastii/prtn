@@ -16,6 +16,15 @@ CMakeFiles/untitled1.dir/lets_check_what_you_pars.c.o: ../lets_check_what_you_pa
 CMakeFiles/untitled1.dir/main.c.o: ../ft_printf.h
 CMakeFiles/untitled1.dir/main.c.o: ../main.c
 
+CMakeFiles/untitled1.dir/write_char.c.o: ../ft_printf.h
+CMakeFiles/untitled1.dir/write_char.c.o: ../write_char.c
+
+CMakeFiles/untitled1.dir/write_d.c.o: ../ft_printf.h
+CMakeFiles/untitled1.dir/write_d.c.o: ../write_d.c
+
+CMakeFiles/untitled1.dir/write_percent.c.o: ../ft_printf.h
+CMakeFiles/untitled1.dir/write_percent.c.o: ../write_percent.c
+
 CMakeFiles/untitled1.dir/write_s.c.o: ../ft_printf.h
 CMakeFiles/untitled1.dir/write_s.c.o: ../write_s.c
 

@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   write_s.c                                          :+:      :+:    :+:   */
+/*   write_char.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/27 16:11:24 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/27 16:18:20 by cveeta           ###   ########.fr       */
+/*   Created: 2020/11/28 17:30:25 by cveeta            #+#    #+#             */
+/*   Updated: 2020/11/28 17:31:12 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	write_type_s(char *str, s_s_f struct_)
+void	write_type_char(char c, s_s_f struct_)
 {
 	unsigned int i;
+	char space;
 
-	if (!str)
-		str = "(null)";
-	if ((struct_.precision < 0) || struct_.precision > (int)ft_strlen(str))
-		struct_.precision = ft_strlen(str);
+	space = ' ';
+	if (struct_.flags & FLG_ZERO)
+		space = '0';
+	if ((struct_.precision < 0) || struct_.precision > 1)
+		struct_.precision = 1;
 	i = struct_.precision;
 	if (!(struct_.flags & FLG_MINUS) && (struct_.width))
 		while (i < struct_.width && (i++ <= 1 - struct_.width - struct_.precision))
-			write(1, " ", 1);
-	write(1, str, struct_.precision);
+			write(1, &space, 1);
+	write(1, &c, 1);
 	if ((struct_.flags & FLG_MINUS) && (struct_.width))
 		while (i < struct_.width && (i++ <= 1 - struct_.width - struct_.precision))
 			write(1, " ", 1);

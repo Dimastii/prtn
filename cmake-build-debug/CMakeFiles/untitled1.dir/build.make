@@ -155,6 +155,45 @@ CMakeFiles/untitled1.dir/write_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled1.dir/write_s.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cveeta/CLionProjects/untitled1/write_s.c -o CMakeFiles/untitled1.dir/write_s.c.s
 
+CMakeFiles/untitled1.dir/write_percent.c.o: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/write_percent.c.o: ../write_percent.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/untitled1.dir/write_percent.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled1.dir/write_percent.c.o   -c /Users/cveeta/CLionProjects/untitled1/write_percent.c
+
+CMakeFiles/untitled1.dir/write_percent.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled1.dir/write_percent.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cveeta/CLionProjects/untitled1/write_percent.c > CMakeFiles/untitled1.dir/write_percent.c.i
+
+CMakeFiles/untitled1.dir/write_percent.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled1.dir/write_percent.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cveeta/CLionProjects/untitled1/write_percent.c -o CMakeFiles/untitled1.dir/write_percent.c.s
+
+CMakeFiles/untitled1.dir/write_char.c.o: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/write_char.c.o: ../write_char.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/untitled1.dir/write_char.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled1.dir/write_char.c.o   -c /Users/cveeta/CLionProjects/untitled1/write_char.c
+
+CMakeFiles/untitled1.dir/write_char.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled1.dir/write_char.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cveeta/CLionProjects/untitled1/write_char.c > CMakeFiles/untitled1.dir/write_char.c.i
+
+CMakeFiles/untitled1.dir/write_char.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled1.dir/write_char.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cveeta/CLionProjects/untitled1/write_char.c -o CMakeFiles/untitled1.dir/write_char.c.s
+
+CMakeFiles/untitled1.dir/write_d.c.o: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/write_d.c.o: ../write_d.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/untitled1.dir/write_d.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled1.dir/write_d.c.o   -c /Users/cveeta/CLionProjects/untitled1/write_d.c
+
+CMakeFiles/untitled1.dir/write_d.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled1.dir/write_d.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cveeta/CLionProjects/untitled1/write_d.c > CMakeFiles/untitled1.dir/write_d.c.i
+
+CMakeFiles/untitled1.dir/write_d.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled1.dir/write_d.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cveeta/CLionProjects/untitled1/write_d.c -o CMakeFiles/untitled1.dir/write_d.c.s
+
 # Object files for target untitled1
 untitled1_OBJECTS = \
 "CMakeFiles/untitled1.dir/main.c.o" \
@@ -162,7 +201,10 @@ untitled1_OBJECTS = \
 "CMakeFiles/untitled1.dir/ft_printf_utils.c.o" \
 "CMakeFiles/untitled1.dir/ft_printf_lets_parse.c.o" \
 "CMakeFiles/untitled1.dir/lets_check_what_you_pars.c.o" \
-"CMakeFiles/untitled1.dir/write_s.c.o"
+"CMakeFiles/untitled1.dir/write_s.c.o" \
+"CMakeFiles/untitled1.dir/write_percent.c.o" \
+"CMakeFiles/untitled1.dir/write_char.c.o" \
+"CMakeFiles/untitled1.dir/write_d.c.o"
 
 # External object files for target untitled1
 untitled1_EXTERNAL_OBJECTS =
@@ -173,9 +215,12 @@ untitled1: CMakeFiles/untitled1.dir/ft_printf_utils.c.o
 untitled1: CMakeFiles/untitled1.dir/ft_printf_lets_parse.c.o
 untitled1: CMakeFiles/untitled1.dir/lets_check_what_you_pars.c.o
 untitled1: CMakeFiles/untitled1.dir/write_s.c.o
+untitled1: CMakeFiles/untitled1.dir/write_percent.c.o
+untitled1: CMakeFiles/untitled1.dir/write_char.c.o
+untitled1: CMakeFiles/untitled1.dir/write_d.c.o
 untitled1: CMakeFiles/untitled1.dir/build.make
 untitled1: CMakeFiles/untitled1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable untitled1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable untitled1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/untitled1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
