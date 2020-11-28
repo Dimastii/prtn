@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 17:41:52 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/28 18:41:09 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/11/28 19:36:00 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,19 @@ void	write_type_d(long long int num, s_s_f struct_)
 	unsigned int i;
 	char *str;
 	char space;
-	//printf("!!!%d !!\n", num);
+	//printf("!!!%d !!\n", struct_.precision);
 	str = ft_itoa(num);
-
 
 	space = ' ';
 	if (struct_.flags & FLG_ZERO)
 		space = '0';
 	if (!str)
 		str = "(null)";
-	if ((struct_.precision < 0) || struct_.precision > (int)ft_strlen(str))
+	if ((struct_.precision < (int)ft_strlen(str)) || struct_.precision > (int)ft_strlen(str))
 		struct_.precision = ft_strlen(str);
 	i = struct_.precision;
+	//printf("!!!%d !!\n", struct_.precision);
+
 	if (!(struct_.flags & FLG_MINUS) && (struct_.width))
 		while (i < struct_.width && (i++ <= 1 - struct_.width - struct_.precision))
 			write(1, &space, 1);

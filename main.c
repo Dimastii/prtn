@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 18:59:51 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/28 19:00:36 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/11/28 19:29:01 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int main()
 {
-	char *qwe = "%.5d";
+	char *qwe = "%8.d";
 
 	printf("\n-------------\n");
 
-	printf(qwe, 2);
+	printf(qwe, 34);
 
 	printf("\n-------------\n");
 
-	ft_printf(qwe, 2);
+	ft_printf(qwe, 34);
 
 	printf("\n-------------\n");
 }
