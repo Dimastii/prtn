@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 15:05:04 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/28 18:36:56 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/11/29 20:11:38 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,22 +56,30 @@ int			ft_atoi(const char *str)
 	return (dig * sign);
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(int n, int precision)
 {
 	int		temp;
 	int		size;
 	int		sign;
 	char	*str;
+	char	*strRet;
+
 
 	temp = n;
 	size = 1;
 	sign = n < 0;
 	while (temp /= 10)
 		size++;
-	if (!(str = malloc(sizeof(char) * (size + 1 + sign))))
+	if (!(str = malloc(sizeof(char) * (size + 1 + precision))))
 		return (NULL);
-	if (sign)
-		*str++ = '-';
+	strRet = str;
+	//if (sign)
+	//	*str++ = '-';
+	while ((precision-- - size) > 0) {
+		*str++ = '0';
+		//printf("!!!%s %d!!\n", str - 1, precision);
+	}
+
 	str += size;
 	*str-- = '\0';
 	if (n == 0)
@@ -81,5 +89,5 @@ char	*ft_itoa(int n)
 		*str-- = (n % 10) * (sign ? -1 : 1) + '0';
 		n /= 10;
 	}
-	return (str + 1 - sign);
+	return (strRet);
 }

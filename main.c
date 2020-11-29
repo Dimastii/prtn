@@ -6,23 +6,26 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 18:59:51 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/28 19:29:01 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/11/29 20:06:35 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int main()
+/*
+"%08.5d"
+"%07.3d"
+*/
+ int main()
 {
-	char *qwe = "%8.d";
+	char *qwe = "%7d";
+	int qqq = -17;
+	printf("\n-------------\n");
+
+	printf(qwe, qqq);
 
 	printf("\n-------------\n");
 
-	printf(qwe, 34);
-
-	printf("\n-------------\n");
-
-	ft_printf(qwe, 34);
+	ft_printf(qwe, qqq);
 
 	printf("\n-------------\n");
 }
