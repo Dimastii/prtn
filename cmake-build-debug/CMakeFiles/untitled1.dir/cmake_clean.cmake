@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled1.dir/main.c.o"
   "CMakeFiles/untitled1.dir/write_char.c.o"
   "CMakeFiles/untitled1.dir/write_d.c.o"
+  "CMakeFiles/untitled1.dir/write_i.c.o"
   "CMakeFiles/untitled1.dir/write_percent.c.o"
   "CMakeFiles/untitled1.dir/write_s.c.o"
   "untitled1"

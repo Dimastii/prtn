@@ -6,29 +6,468 @@ void	write_type_d(int num, s_s_f struct_)
 
 	str = ft_itoa(num);
 	space = ' ';
-	if (struct_.flags & FLG_ZERO)
+	if (struct_.flg & FLG_ZERO)
 		space = '0';
-	if ((struct_.flags & FLG_SPACE) && (num > 0) && !(struct_.flags & FLG_PLUS))
+	if ((struct_.flg & FLG_SPACE) && (num > 0) && !(struct_.flg & FLG_PLUS))
 		write(1, " ", 1);
 		//printf("|%d|", num);
 	if (!str)
 		str = "(null)";
-	if ((struct_.precision < (int)ft_strlen(str)))
-		struct_.precision = ft_strlen(str);
-	i = struct_.precision;
-	if (!(struct_.flags & FLG_MINUS) && (struct_.width))
-		while (i < struct_.width && (i++ <= 1 - struct_.width - struct_.precision))
+	if ((struct_.preci < (int)ft_strlen(str)))
+		struct_.preci = ft_strlen(str);
+	i = struct_.preci;
+	if (!(struct_.flg & FLG_MINUS) && (struct_.wth))
+		while (i < struct_.wth && (i++ <= 1 - struct_.wth - struct_.preci))
 			write(1, &space, 1);
-	if (num > 0 && (struct_.flags & FLG_PLUS))
+	if (num > 0 && (struct_.flg & FLG_PLUS))
 		write(1, "+", 1);
 	i = 0;
-	//printf("!!! %d %s !!\n", struct_.precision, str);
+	//printf("!!! %d %s !!\n", struct_.preci, str);
 	if (num < 0)
 		write(1, "-", 1);
-	while (i++ < struct_.precision - ft_strlen(str))
+	while (i++ < struct_.preci - ft_strlen(str))
 		write(1, "0", 1);
-	write(1, str, struct_.precision);
-	if ((struct_.flags & FLG_MINUS) && (struct_.width))
-		while (i < struct_.width && (i++ <= 1 - struct_.width - struct_.precision))
+	write(1, str, struct_.preci);
+	if ((struct_.flg & FLG_MINUS) && (struct_.wth))
+		while (i < struct_.wth && (i++ <= 1 - struct_.wth - struct_.preci))
+			write(1, " ", 1);
+}
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+30.12. 15:09
+
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+void	write_type_d(int num, s_s_f struct_)
+{
+	unsigned int i;
+	char *str;
+	char space;
+	int sign;
+	str = ft_itoa(num, struct_.preci);
+
+	sign = (num < 0)? 1:0;
+	space = ' ';
+	if ((struct_.flg & FLG_ZERO) && struct_.preci < 0)
+		space = '0';
+
+	if ((struct_.flg & FLG_SPACE) && (num > 0) && !(struct_.flg & FLG_PLUS))
+		write(1, " ", 1);
+
+	if (!str)
+		str = "(null)";
+
+	if (num > 0 && (struct_.flg & FLG_PLUS) && (struct_.flg & FLG_ZERO) && str[0] != '0')
+		write(1, "+", 1);
+	if (num < 0 && (struct_.flg & FLG_ZERO) && str[0] != '0')
+		write(1, "-", 1);
+
+	if ((struct_.preci < (int)ft_strlen(str)) || struct_.preci > (int)ft_strlen(str))
+		struct_.preci = ft_strlen(str);
+	i = struct_.preci + sign;
+
+	printf("struct_.preci = %d\n", struct_.preci);
+
+
+
+	if (!(struct_.flg & FLG_MINUS) && (struct_.wth))
+		while (i < struct_.wth && (i++ <= 1 - struct_.wth - struct_.preci))
+			write(1, &space, 1);
+
+
+	if (num > 0 && (struct_.flg & FLG_PLUS) && (!(struct_.flg & FLG_ZERO) || str[0] == '0'))
+		write(1, "+", 1);
+	if (num < 0 && (!(struct_.flg & FLG_ZERO) || str[0] == '0'))
+		write(1, "-", 1);
+
+
+	write(1, str, struct_.preci);
+
+
+	if ((struct_.flg & FLG_MINUS) && (struct_.wth))
+		while (i < struct_.wth && (i++ <= 1 - struct_.wth - struct_.preci))
+			write(1, " ", 1);
+}
+
+
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+30.12. 15:25
+
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+
+void	write_type_d(int num, s_s_f struct_)
+{
+	unsigned int i;
+	char *str;
+	char space;
+	int sign;
+	str = ft_itoa(num, struct_.preci);
+
+	sign = (num < 0)? 1:0;
+	space = ' ';
+	if ((struct_.flg & FLG_ZERO) && struct_.preci < 0)
+		space = '0';
+
+	if ((struct_.flg & FLG_SPACE) && (num > 0) && !(struct_.flg & FLG_PLUS))
+		write(1, " ", 1);
+
+	if (!str)
+		str = "(null)";
+	//printf("struct_.preci = %d\n", struct_.preci);
+
+	if (num > 0 && (struct_.flg & FLG_PLUS) && (struct_.flg & FLG_ZERO) && str[0] != '0')
+		write(1, "+", 1);
+	if (num < 0 && (struct_.flg & FLG_ZERO) && str[0] != '0')
+		write(1, "-", 1);
+
+	if ((struct_.preci < (int)ft_strlen(str)) || struct_.preci > (int)ft_strlen(str))
+		struct_.preci = ft_strlen(str);
+	i = struct_.preci + sign;
+
+
+
+
+	if (!(struct_.flg & FLG_MINUS) && (struct_.wth))
+		while (i < struct_.wth && (i++ <= 1 - struct_.wth - struct_.preci))
+			write(1, &space, 1);
+
+
+	if (num > 0 && (struct_.flg & FLG_PLUS) && (!(struct_.flg & FLG_ZERO) || str[0] == '0'))
+		write(1, "+", 1);
+	if (num < 0 && (!(struct_.flg & FLG_ZERO) || str[0] == '0'))
+		write(1, "-", 1);
+
+
+	write(1, str, struct_.preci);
+
+
+	if ((struct_.flg & FLG_MINUS) && (struct_.wth))
+		while (i < struct_.wth && (i++ <= 1 - struct_.wth - struct_.preci))
+			write(1, " ", 1);
+}
+
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+30.12. 15:25   79/80
+
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   write_d.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/28 17:41:52 by cveeta            #+#    #+#             */
+/*   Updated: 2020/11/30 15:42:24 by cveeta           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+
+void	write_type_d(int num, s_s_f struct_)
+{
+	unsigned int i;
+	char *str;
+	char space;
+	int sign;
+	str = ft_itoa(num, struct_.preci);
+
+	sign = (num < 0)? 1:0;
+	space = ' ';
+	if ((struct_.flg & FLG_ZERO) && struct_.preci < 0)
+		space = '0';
+
+	if ((struct_.flg & FLG_SPACE) && (num > 0) && !(struct_.flg & FLG_PLUS))
+		write(1, " ", 1);
+
+	if (!str)
+		str = "(null)";
+
+	if (num > 0 && (struct_.flg & FLG_PLUS) && (struct_.flg & FLG_ZERO) && str[0] != '0')
+		write(1, "+", 1);
+	if (num < 0 && (struct_.flg & FLG_ZERO) && str[0] != '0'/* && ((struct_.flg & FLG_ZERO) && struct_.preci < 0*/)
+		write(1, "-", 1);
+
+	if (((struct_.preci < (int)ft_strlen(str)) || struct_.preci > (int)ft_strlen(str)) &&  struct_.preci != 0)
+		struct_.preci = ft_strlen(str);
+	i = struct_.preci + sign;
+
+
+
+
+	if (!(struct_.flg & FLG_MINUS) && (struct_.wth))
+		while (i < struct_.wth && (i++ <= 1 - struct_.wth - struct_.preci))
+			write(1, &space, 1);
+
+
+	if (num > 0 && (struct_.flg & FLG_PLUS) && (!(struct_.flg & FLG_ZERO) || str[0] == '0'))
+		write(1, "+", 1);
+!!!!if (num < 0 && (!(struct_.flg & FLG_ZERO) || str[0] == '0'))
+		write(1, "-", 1);
+
+	//printf("struct_.preci = %d\n", struct_.preci);
+	write(1, str, struct_.preci);
+
+
+	if ((struct_.flg & FLG_MINUS) && (struct_.wth))
+		while (i < struct_.wth && (i++ <= 1 - struct_.wth - struct_.preci))
+			write(1, " ", 1);
+}
+
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+1.12. 12:25   антон редакшон продакшон(перечитал пон что нето)
+
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   write_d.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/28 17:41:52 by cveeta            #+#    #+#             */
+/*   Updated: 2020/12/01 11:59:06 by cveeta           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+
+void	write_type_d(int num, s_s_f struct_)
+{
+	unsigned int i;
+	char *str;
+	char space;
+	int sign;
+	str = ft_itoa(num, struct_.preci);
+
+	sign = (num < 0)? 1:0;
+	space = ' ';
+	if ((struct_.flg & FLG_ZERO) && struct_.preci < 0)
+		space = '0';
+
+	if ((struct_.flg & FLG_SPACE) && (num > 0) && !(struct_.flg & FLG_PLUS))
+		write(1, " ", 1);
+
+	if (!str)
+		str = "(null)";
+
+	if (num > 0 && (struct_.flg & FLG_PLUS) && (struct_.flg & FLG_ZERO) && str[0] != '0')
+		write(1, "+", 1);
+
+	if (num < 0 && (((struct_.flg & FLG_ZERO) && ((struct_.wth <= (unsigned int)ft_strlen(str)))
+			|| (struct_.wth >= (unsigned int)ft_strlen(str)))))
+		write(1, "-", 1);
+
+	if (((struct_.preci < (int)ft_strlen(str)) || struct_.preci > (int)ft_strlen(str)) /*&& struct_.preci != 0*/)//условие под зеро велью
+		struct_.preci = ft_strlen(str);
+	i = struct_.preci + sign;
+
+
+
+	if (!(struct_.flg & FLG_MINUS) && (struct_.wth))
+		while (i < struct_.wth && (i++ <= 1 - struct_.wth - struct_.preci))
+			write(1, &space, 1);
+
+
+	if (num > 0 && (struct_.flg & FLG_PLUS) && (!(struct_.flg & FLG_ZERO) || str[0] == '0'))
+		write(1, "+", 1);
+	if (num < 0) {
+		if ((struct_.flg & FLG_ZERO) && ((struct_.wth >= (unsigned int)ft_strlen(str)) || (struct_.wth >= (unsigned int)ft_strlen(str))))
+			write(1, "-", 1);
+	}
+
+
+	write(1, str, struct_.preci);
+
+
+
+	if ((struct_.flg & FLG_MINUS) && (struct_.wth))
+		while (i < struct_.wth && (i++ <= 1 - struct_.wth - struct_.preci))
+			write(1, " ", 1);
+
+	//printf("\nstruct_.preci \t=\t%d\nstruct_.w  \t\t\t=\t%d\n", struct_.preci,struct_.wth);
+
+}
+
+
+
+
+
+
+
+
+
+
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+1.12. 14:25 77/80   220 223 224 лишние минусы после видса
+
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+
+
+
+
+
+
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   write_d.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/28 17:41:52 by cveeta            #+#    #+#             */
+/*   Updated: 2020/12/01 14:24:33 by cveeta           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+
+void	write_type_d(int num, s_s_f struct_)
+{
+	unsigned int i;
+	char *str;
+	char space;
+	int sign;
+	str = ft_itoa(num, struct_.preci);
+
+	sign = (num < 0)? 1:0;
+	space = ' ';
+	if ((struct_.flg & FLG_ZERO) && struct_.preci < 0)
+		space = '0';
+
+	if ((struct_.flg & FLG_SPACE) && (num > 0) && !(struct_.flg & FLG_PLUS))
+		write(1, " ", 1);
+
+	if (!str)
+		str = "(null)";
+
+	if (num > 0 && (struct_.flg & FLG_PLUS) && (struct_.flg & FLG_ZERO) && str[0] != '0')
+		write(1, "+", 1);
+	if (num < 0 && (((struct_.flg & FLG_ZERO) && str[0] != '0' && !struct_.wth)
+						||
+			((struct_.flg & FLG_ZERO) && str[0] != '0' && struct_.preci == -1
+			))/* && ((struct_.flg & FLG_ZERO) && struct_.preci < 0*/)
+		write(1, "-", 1);
+
+	//printf("\nstruct_.preci \t=\t%d\nstruct_.w  \t\t\t=\t%d\n", struct_.preci,struct_.wth);
+
+	if (struct_.preci != 0)
+		struct_.preci = ft_strlen(str);
+	i = struct_.preci + sign;
+
+
+
+	if (!(struct_.flg & FLG_MINUS) && (struct_.wth))
+		while (i < struct_.wth && (i++ <= 1 - struct_.wth - struct_.preci))
+			write(1, &space, 1);
+
+
+	if (num > 0 && (struct_.flg & FLG_PLUS) && (!(struct_.flg & FLG_ZERO) || str[0] == '0'))
+		write(1, "+", 1);
+	if (num < 0 && !(((struct_.flg & FLG_ZERO) && str[0] != '0' && !struct_.wth)
+					||
+					((struct_.flg & FLG_ZERO) && str[0] != '0' && struct_.preci == -1
+					)))
+		write(1, "-", 1);
+
+
+	write(1, str, struct_.preci);
+
+	//printf("\nstruct_.preci = %d\n", struct_.preci);
+	if ((struct_.flg & FLG_MINUS) && (struct_.wth))
+		while (i < struct_.wth && (i++ <= 1 - struct_.wth - struct_.preci))
+			write(1, " ", 1);
+}
+
+
+
+
+
+
+
+
+
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+1.12. 15:45 80/80  я блять не верю
+
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+
+
+
+
+
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   write_d.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/28 17:41:52 by cveeta            #+#    #+#             */
+/*   Updated: 2020/12/01 15:47:17 by cveeta           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+
+void	write_type_d(int num, s_s_f struct_)
+{
+	unsigned int i;
+	char *str;
+	char space;
+	int sign;
+	int j;
+	str = ft_itoa(num, struct_.preci);
+
+	sign = (num < 0)? 1:0;
+	space = ' ';
+	if ((struct_.flg & FLG_ZERO) && struct_.preci < 0)
+		space = '0';
+
+	if ((struct_.flg & FLG_SPACE) && (num > 0) && !(struct_.flg & FLG_PLUS))
+		write(1, " ", 1);
+
+	if (!str)
+		str = "(null)";
+
+	if (num > 0 && (struct_.flg & FLG_PLUS) && (struct_.flg & FLG_ZERO) && str[0] != '0')
+		write(1, "+", 1);
+	if (num < 0 && (((struct_.flg & FLG_ZERO) && str[0] != '0' && !struct_.wth)||((struct_.flg & FLG_ZERO) && (str[0] == '0' || struct_.wth ) && struct_.preci == -1)))
+		write(1, "-", 1);
+	j = struct_.preci;
+	if (struct_.preci != 0)
+		j = ft_strlen(str);
+	i = j + sign;
+
+
+
+	if (!(struct_.flg & FLG_MINUS) && (struct_.wth))
+		while (i < struct_.wth && (i++ <= 1 - struct_.wth - j))
+			write(1, &space, 1);
+
+
+	if (num > 0 && (struct_.flg & FLG_PLUS) && (!(struct_.flg & FLG_ZERO) || str[0] == '0'))
+		write(1, "+", 1);
+	if (num < 0 && !(((struct_.flg & FLG_ZERO) && str[0] != '0' && !struct_.wth)
+					||
+					((struct_.flg & FLG_ZERO) && (str[0] == '0' || struct_.wth ) && struct_.preci == -1)
+	))
+		write(1, "-", 1);
+	write(1, str, j);
+	if ((struct_.flg & FLG_MINUS) && (struct_.wth))
+		while (i < struct_.wth && (i++ <= 1 - struct_.wth - j))
 			write(1, " ", 1);
 }

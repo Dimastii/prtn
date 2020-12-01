@@ -14,9 +14,9 @@
 
 void	lets_null(s_s_f *struct_)
 {
-	struct_->flags = 0;
-	struct_->width = 0;
-	struct_->precision = -1;
+	struct_->flg = 0;
+	struct_->wth = 0;
+	struct_->preci = -1;
 	struct_->type = 0;
 }
 

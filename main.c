@@ -6,26 +6,44 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 18:59:51 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/29 20:06:35 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/01 17:31:49 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 /*
-"%08.5d"
-"%07.3d"
-*/
+
+
+ * "%.d" !!!!!!!!!!!!!!!!!!!!!?!?!?!?!?!?!?!?!?!?!?
+ *
+ *  First line of code: {return test("%07d", -54);}
+    First line of code: {return test("%04d", -532);}
+    First line of code: {return test("%04d", -4825;}
+
+
+    First line of code: {return test("%08.3d", -8473);}
+    First line of code: {return test("%03.3d", -8462);}
+    First line of code: {return test( "%0-8.3d", -8473);}
+    First line of code: {return test("%0-3.3d", -8462);}
+
+"%*s", -3, "hello"
+
+ * "% 010.5d", -216
+ * "% 08.3d", -8473
+ */
  int main()
 {
-	char *qwe = "%7d";
-	int qqq = -17;
-	printf("\n-------------\n");
+	char *qwe = "%07d";
+	char *qww = "%04d";
+	char *www = "%04d";
 
-	printf(qwe, qqq);
+//	char *qwe = "%07d";
+//	char *qww = "%04d";
+//	char *www = "%04d";
 
-	printf("\n-------------\n");
+	int qqq =   -8141;
 
-	ft_printf(qwe, qqq);
+	printf("%16s", "nark nark\n");
+	ft_printf("%16s", "nark nark");
 
-	printf("\n-------------\n");
 }

@@ -332,6 +332,33 @@ write_d.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_d.c.s
 .PHONY : write_d.c.s
 
+write_i.o: write_i.c.o
+
+.PHONY : write_i.o
+
+# target to build an object file
+write_i.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_i.c.o
+.PHONY : write_i.c.o
+
+write_i.i: write_i.c.i
+
+.PHONY : write_i.i
+
+# target to preprocess a source file
+write_i.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_i.c.i
+.PHONY : write_i.c.i
+
+write_i.s: write_i.c.s
+
+.PHONY : write_i.s
+
+# target to generate assembly for a file
+write_i.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_i.c.s
+.PHONY : write_i.c.s
+
 write_percent.o: write_percent.c.o
 
 .PHONY : write_percent.o
@@ -416,6 +443,9 @@ help:
 	@echo "... write_d.o"
 	@echo "... write_d.i"
 	@echo "... write_d.s"
+	@echo "... write_i.o"
+	@echo "... write_i.i"
+	@echo "... write_i.s"
 	@echo "... write_percent.o"
 	@echo "... write_percent.i"
 	@echo "... write_percent.s"

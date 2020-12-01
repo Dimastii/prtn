@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 12:25:38 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/29 17:11:48 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/01 17:47:53 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@
 
 typedef struct ssf
 {
-	unsigned char	flags;
-	unsigned int	width;
-	int				precision;
+	unsigned char	flg;
+	int				wth;
+	int				preci;
 	unsigned char	type;
 
 } s_s_f;
@@ -45,6 +45,8 @@ void		write_type_s(char *str, s_s_f struct_);
 void		write_type_percent(s_s_f struct_);
 void		write_type_char(char c, s_s_f struct_);
 void		write_type_d(int num, s_s_f struct_);
+void		write_type_i(int num, s_s_f s_);
+
 
 
 #endif

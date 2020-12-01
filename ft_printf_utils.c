@@ -77,7 +77,7 @@ char	*ft_itoa(int n, int precision)
 	//	*str++ = '-';
 	while ((precision-- - size) > 0) {
 		*str++ = '0';
-		//printf("!!!%s %d!!\n", str - 1, precision);
+		//printf("!!!%s %d!!\n", str - 1, preci);
 	}
 
 	str += size;
