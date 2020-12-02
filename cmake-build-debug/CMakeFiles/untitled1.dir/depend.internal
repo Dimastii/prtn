@@ -25,9 +25,18 @@ CMakeFiles/untitled1.dir/write_d.c.o
 CMakeFiles/untitled1.dir/write_i.c.o
  /Users/cveeta/CLionProjects/untitled1/ft_printf.h
  /Users/cveeta/CLionProjects/untitled1/write_i.c
+CMakeFiles/untitled1.dir/write_p.c.o
+ /Users/cveeta/CLionProjects/untitled1/ft_printf.h
+ /Users/cveeta/CLionProjects/untitled1/write_p.c
 CMakeFiles/untitled1.dir/write_percent.c.o
  /Users/cveeta/CLionProjects/untitled1/ft_printf.h
  /Users/cveeta/CLionProjects/untitled1/write_percent.c
 CMakeFiles/untitled1.dir/write_s.c.o
  /Users/cveeta/CLionProjects/untitled1/ft_printf.h
  /Users/cveeta/CLionProjects/untitled1/write_s.c
+CMakeFiles/untitled1.dir/write_u.c.o
+ /Users/cveeta/CLionProjects/untitled1/ft_printf.h
+ /Users/cveeta/CLionProjects/untitled1/write_u.c
+CMakeFiles/untitled1.dir/write_x_X.c.o
+ /Users/cveeta/CLionProjects/untitled1/ft_printf.h
+ /Users/cveeta/CLionProjects/untitled1/write_x_X.c

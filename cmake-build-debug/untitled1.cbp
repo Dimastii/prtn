@@ -105,10 +105,19 @@
 		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_i.c">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_p.c">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_percent.c">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_s.c">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_u.c">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_x_X.c">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/cveeta/CLionProjects/untitled1/CMakeLists.txt">

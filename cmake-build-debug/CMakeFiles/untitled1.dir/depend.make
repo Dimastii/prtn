@@ -25,9 +25,18 @@ CMakeFiles/untitled1.dir/write_d.c.o: ../write_d.c
 CMakeFiles/untitled1.dir/write_i.c.o: ../ft_printf.h
 CMakeFiles/untitled1.dir/write_i.c.o: ../write_i.c
 
+CMakeFiles/untitled1.dir/write_p.c.o: ../ft_printf.h
+CMakeFiles/untitled1.dir/write_p.c.o: ../write_p.c
+
 CMakeFiles/untitled1.dir/write_percent.c.o: ../ft_printf.h
 CMakeFiles/untitled1.dir/write_percent.c.o: ../write_percent.c
 
 CMakeFiles/untitled1.dir/write_s.c.o: ../ft_printf.h
 CMakeFiles/untitled1.dir/write_s.c.o: ../write_s.c
+
+CMakeFiles/untitled1.dir/write_u.c.o: ../ft_printf.h
+CMakeFiles/untitled1.dir/write_u.c.o: ../write_u.c
+
+CMakeFiles/untitled1.dir/write_x_X.c.o: ../ft_printf.h
+CMakeFiles/untitled1.dir/write_x_X.c.o: ../write_x_X.c
 

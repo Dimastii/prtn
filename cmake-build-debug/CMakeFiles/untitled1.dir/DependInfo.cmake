@@ -12,8 +12,11 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/cveeta/CLionProjects/untitled1/write_char.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/write_char.c.o"
   "/Users/cveeta/CLionProjects/untitled1/write_d.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/write_d.c.o"
   "/Users/cveeta/CLionProjects/untitled1/write_i.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/write_i.c.o"
+  "/Users/cveeta/CLionProjects/untitled1/write_p.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/write_p.c.o"
   "/Users/cveeta/CLionProjects/untitled1/write_percent.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/write_percent.c.o"
   "/Users/cveeta/CLionProjects/untitled1/write_s.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/write_s.c.o"
+  "/Users/cveeta/CLionProjects/untitled1/write_u.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/write_u.c.o"
+  "/Users/cveeta/CLionProjects/untitled1/write_x_X.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/write_x_X.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

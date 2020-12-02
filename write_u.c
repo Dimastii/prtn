@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   write_d.c                                          :+:      :+:    :+:   */
+/*   write_u.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/28 17:41:52 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/02 19:35:46 by cveeta           ###   ########.fr       */
+/*   Created: 2020/12/02 19:54:10 by cveeta            #+#    #+#             */
+/*   Updated: 2020/12/02 19:58:04 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	write_type_d(int num, s_s_f s_)
+void	write_type_u(int num, s_s_f s_)
 {
 	int i;
 	char *str;
@@ -25,15 +25,6 @@ void	write_type_d(int num, s_s_f s_)
 	space = ' ';
 	if ((s_.flg & FLG_ZERO) && s_.preci < 0)
 		space = '0';
-	if ((s_.flg & FLG_SPACE) && (num > 0) && !(s_.flg & FLG_PLUS))
-		write(1, " ", 1);
-	if (num > 0 && (s_.flg & FLG_PLUS)
-	&& (((s_.flg & FLG_ZERO) && str[0] != '0' && !s_.wth)
-	|| ((s_.flg & FLG_ZERO) && (str[0] == '0' || s_.wth) && s_.preci == -1)))
-		write(1, "+", 1);
-	if (num < 0 && (((s_.flg & FLG_ZERO) && str[0] != '0' && !s_.wth)
-	|| ((s_.flg & FLG_ZERO) && (str[0] == '0' || s_.wth) && s_.preci == -1)))
-		write(1, "-", 1);
 	j = s_.preci;
 	if (s_.preci != 0)
 		j = ft_strlen(str);
@@ -41,13 +32,6 @@ void	write_type_d(int num, s_s_f s_)
 	if (!(s_.flg & FLG_MINUS) && (s_.wth))
 		while (i++ < s_.wth)
 			write(1, &space, 1);
-	if (num > 0 && (s_.flg & FLG_PLUS)
-	&& !(((s_.flg & FLG_ZERO) && str[0] != '0' && !s_.wth)
-	|| ((s_.flg & FLG_ZERO) && (str[0] == '0' || s_.wth) && s_.preci == -1)))
-		write(1, "+", 1);
-	if (num < 0 && !(((s_.flg & FLG_ZERO) && str[0] != '0' && !s_.wth)
-	|| ((s_.flg & FLG_ZERO) && (str[0] == '0' || s_.wth) && s_.preci == -1)))
-		write(1, "-", 1);
 	write(1, str, j);
 	if ((s_.flg & FLG_MINUS) && (s_.wth))
 		while (i++ < s_.wth)

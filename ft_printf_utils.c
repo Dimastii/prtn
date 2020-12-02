@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 15:05:04 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/29 20:11:38 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/02 20:33:48 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,84 @@ int			ft_atoi(const char *str)
 	return (dig * sign);
 }
 
+static void		ft_itoaX_utils(unsigned int n, int *size, int upper_mode, char *x_or_X)
+{
+	while (n /= 16)
+		(*size)++;
+	if (upper_mode)
+		*x_or_X = 'W';
+	else
+		*x_or_X = '7';
+}
+char	*ft_itoaX(unsigned int n, int precision, int upper_mode)
+{
+	int		size;
+	char	*str;
+	char	*strRet;
+	char 	x_or_X;
+
+	size = 1;
+	ft_itoaX_utils(n, &size, upper_mode, &x_or_X);
+	if (!(str = malloc(sizeof(char) * (size + 1 + precision))))
+		return (NULL);
+	strRet = str;
+	while ((precision-- - size) > 0)
+		*str++ = '0';
+	str += size;
+	*str-- = '\0';
+	if (n == 0)
+		*str-- = '0';
+	while (n)
+	{
+		if ((n % 16) <= 9)
+			*str-- = (n % 16) + '0';
+		else
+			*str-- = (n % 16) + x_or_X;
+		n /= 16;
+	}
+	return (strRet);
+}
+
+
+static void		ft_itoaP_utils(unsigned long long int n, int *size, int upper_mode, char *x_or_X)
+{
+	while (n /= 16)
+		(*size)++;
+	if (upper_mode)
+		*x_or_X = 'W';
+	else
+		*x_or_X = '7';
+}
+
+char	*ft_itoaP(unsigned long long int n, int precision, int upper_mode)
+{
+	int		size;
+	char	*str;
+	char	*strRet;
+	char 	x_or_X;
+
+	size = 1;
+	ft_itoaP_utils(n, &size, upper_mode, &x_or_X);
+	if (!(str = malloc(sizeof(char) * (size + 1 + precision))))
+		return (NULL);
+	strRet = str;
+	while ((precision-- - size) > 0)
+		*str++ = '0';
+	str += size;
+	*str-- = '\0';
+	if (n == 0)
+		*str-- = '0';
+	while (n)
+	{
+		if ((n % 16) <= 9)
+			*str-- = (n % 16) + '0';
+		else
+			*str-- = (n % 16) + x_or_X;
+		n /= 16;
+	}
+	return (strRet);
+}
+
 char	*ft_itoa(int n, int precision)
 {
 	int		temp;
@@ -63,7 +141,6 @@ char	*ft_itoa(int n, int precision)
 	int		sign;
 	char	*str;
 	char	*strRet;
-
 
 	temp = n;
 	size = 1;
@@ -73,13 +150,8 @@ char	*ft_itoa(int n, int precision)
 	if (!(str = malloc(sizeof(char) * (size + 1 + precision))))
 		return (NULL);
 	strRet = str;
-	//if (sign)
-	//	*str++ = '-';
-	while ((precision-- - size) > 0) {
+	while ((precision-- - size) > 0)
 		*str++ = '0';
-		//printf("!!!%s %d!!\n", str - 1, preci);
-	}
-
 	str += size;
 	*str-- = '\0';
 	if (n == 0)

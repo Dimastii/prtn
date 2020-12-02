@@ -359,6 +359,33 @@ write_i.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_i.c.s
 .PHONY : write_i.c.s
 
+write_p.o: write_p.c.o
+
+.PHONY : write_p.o
+
+# target to build an object file
+write_p.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_p.c.o
+.PHONY : write_p.c.o
+
+write_p.i: write_p.c.i
+
+.PHONY : write_p.i
+
+# target to preprocess a source file
+write_p.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_p.c.i
+.PHONY : write_p.c.i
+
+write_p.s: write_p.c.s
+
+.PHONY : write_p.s
+
+# target to generate assembly for a file
+write_p.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_p.c.s
+.PHONY : write_p.c.s
+
 write_percent.o: write_percent.c.o
 
 .PHONY : write_percent.o
@@ -413,6 +440,60 @@ write_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_s.c.s
 .PHONY : write_s.c.s
 
+write_u.o: write_u.c.o
+
+.PHONY : write_u.o
+
+# target to build an object file
+write_u.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_u.c.o
+.PHONY : write_u.c.o
+
+write_u.i: write_u.c.i
+
+.PHONY : write_u.i
+
+# target to preprocess a source file
+write_u.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_u.c.i
+.PHONY : write_u.c.i
+
+write_u.s: write_u.c.s
+
+.PHONY : write_u.s
+
+# target to generate assembly for a file
+write_u.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_u.c.s
+.PHONY : write_u.c.s
+
+write_x_X.o: write_x_X.c.o
+
+.PHONY : write_x_X.o
+
+# target to build an object file
+write_x_X.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_x_X.c.o
+.PHONY : write_x_X.c.o
+
+write_x_X.i: write_x_X.c.i
+
+.PHONY : write_x_X.i
+
+# target to preprocess a source file
+write_x_X.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_x_X.c.i
+.PHONY : write_x_X.c.i
+
+write_x_X.s: write_x_X.c.s
+
+.PHONY : write_x_X.s
+
+# target to generate assembly for a file
+write_x_X.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_x_X.c.s
+.PHONY : write_x_X.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -446,12 +527,21 @@ help:
 	@echo "... write_i.o"
 	@echo "... write_i.i"
 	@echo "... write_i.s"
+	@echo "... write_p.o"
+	@echo "... write_p.i"
+	@echo "... write_p.s"
 	@echo "... write_percent.o"
 	@echo "... write_percent.i"
 	@echo "... write_percent.s"
 	@echo "... write_s.o"
 	@echo "... write_s.i"
 	@echo "... write_s.s"
+	@echo "... write_u.o"
+	@echo "... write_u.i"
+	@echo "... write_u.s"
+	@echo "... write_x_X.o"
+	@echo "... write_x_X.i"
+	@echo "... write_x_X.s"
 .PHONY : help
 
 
