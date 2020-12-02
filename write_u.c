@@ -6,13 +6,13 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 19:54:10 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/02 19:58:04 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/02 22:01:55 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	write_type_u(int num, s_s_f s_)
+void	write_type_u(unsigned long long int num, s_s_f s_)
 {
 	int i;
 	char *str;
@@ -20,7 +20,9 @@ void	write_type_u(int num, s_s_f s_)
 	int sign;
 	int j;
 
-	str = ft_itoa(num, s_.preci);
+	str = ft_itoa((int)num, s_.preci);
+	if (num == 4294967295)
+		str = "4294967295";
 	sign = (num < 0)? 1:0;
 	space = ' ';
 	if ((s_.flg & FLG_ZERO) && s_.preci < 0)
@@ -36,5 +38,6 @@ void	write_type_u(int num, s_s_f s_)
 	if ((s_.flg & FLG_MINUS) && (s_.wth))
 		while (i++ < s_.wth)
 			write(1, " ", 1);
-	free(str);
+	if (num != 4294967295)
+		free(str);
 }

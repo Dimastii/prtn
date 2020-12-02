@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 15:05:04 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/02 20:33:48 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/02 21:39:13 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ static void		ft_itoaP_utils(unsigned long long int n, int *size, int upper_mode,
 		*x_or_X = '7';
 }
 
-char	*ft_itoaP(unsigned long long int n, int precision, int upper_mode)
+char	*ft_itoaP(unsigned long long int n, int precision, int upper_mode, int base)
 {
 	int		size;
 	char	*str;
@@ -125,11 +125,11 @@ char	*ft_itoaP(unsigned long long int n, int precision, int upper_mode)
 		*str-- = '0';
 	while (n)
 	{
-		if ((n % 16) <= 9)
-			*str-- = (n % 16) + '0';
+		if ((n % base) <= 9)
+			*str-- = (n % base) + '0';
 		else
-			*str-- = (n % 16) + x_or_X;
-		n /= 16;
+			*str-- = (n % base) + x_or_X;
+		n /= base;
 	}
 	return (strRet);
 }

@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 18:59:51 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/02 20:41:47 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/02 22:22:07 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@
  */
  int main()
 {
-	char *qwe = "%10p|\n";
+	char *qwe = "%04d";
 	char *qww = "%04d";
 	char *www = "%04d";
 
@@ -43,8 +43,9 @@
 
 	int qqq =   -8141;
 	int hex = 1024;
-	printf(qwe, &hex);
-	ft_printf(qwe, &hex);
+	printf("1|%*d|\n", -5, 100);
+	ft_printf("2|%-*s|\n", -4, "abc");
+
 
 
 
