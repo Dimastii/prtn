@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:08:12 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/01 17:05:08 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/03 14:02:00 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ void	check_reed_precision(char **str, s_s_f **struct_, va_list **ap)
 		if (*(++*str) == '*')
 		{
 			(*struct_)->preci = va_arg(**ap, int);
+			if ((*struct_)->preci < -1)
+				(*struct_)->preci = -1;
 			++*str;
 		}
 		else if (ft_isdigit(**str))
@@ -70,11 +72,15 @@ void	check_reed_width(char **str, s_s_f **struct_, va_list **ap)
 		(*struct_)->wth = va_arg(**ap, int);
 		++*str;
 	}
+	if ((*struct_)->wth < 0)
+	{
+		(*struct_)->flg = (*struct_)->flg | FLG_MINUS;
+		(*struct_)->wth *= -1;
+	}
 }
 
 void	check_flags(char **str, s_s_f **struct_)
 {
-	//printf("1!!!%d <-----> %s!!!\n", (*struct_)->flg, *str);
 	if (**str == '-')
 		(*struct_)->flg = (*struct_)->flg | FLG_MINUS;
 	else if (**str == '0')

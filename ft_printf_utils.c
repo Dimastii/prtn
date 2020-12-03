@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 15:05:04 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/02 21:39:13 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/03 15:01:15 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,7 @@ char	*ft_itoaP(unsigned long long int n, int precision, int upper_mode, int base
 
 	size = 1;
 	ft_itoaP_utils(n, &size, upper_mode, &x_or_X);
+	precision = (precision >= -1)? precision : -1;
 	if (!(str = malloc(sizeof(char) * (size + 1 + precision))))
 		return (NULL);
 	strRet = str;
@@ -137,6 +138,36 @@ char	*ft_itoaP(unsigned long long int n, int precision, int upper_mode, int base
 char	*ft_itoa(int n, int precision)
 {
 	int		temp;
+	int		size;
+	int		sign;
+	char	*str;
+	char	*strRet;
+
+	temp = n;
+	size = 1;
+	sign = n < 0;
+	while (temp /= 10)
+		size++;
+	if (!(str = malloc(sizeof(char) * (size + 1 + precision))))
+		return (NULL);
+	strRet = str;
+	while ((precision-- - size) > 0)
+		*str++ = '0';
+	str += size;
+	*str-- = '\0';
+	if (n == 0)
+		*str-- = '0';
+	while (n)
+	{
+		*str-- = (n % 10) * (sign ? -1 : 1) + '0';
+		n /= 10;
+	}
+	return (strRet);
+}
+
+char	*ft_itoaU(unsigned int n, int precision)
+{
+	unsigned int 		temp;
 	int		size;
 	int		sign;
 	char	*str;
