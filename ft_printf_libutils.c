@@ -1,33 +1,76 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   write_u.c                                          :+:      :+:    :+:   */
+/*   ft_printf_libutils.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/02 19:54:10 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/03 17:55:18 by cveeta           ###   ########.fr       */
+/*   Created: 2020/12/03 17:25:52 by cveeta            #+#    #+#             */
+/*   Updated: 2020/12/03 18:05:22 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void			ft_itoau_utils(unsigned int n, int *size)
+size_t				ft_strlen(const char *s)
+{
+	size_t	len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
+}
+
+int					ft_isdigit(int c)
+{
+	if (c <= '9' && c >= '0')
+		return (1);
+	return (0);
+}
+
+int					ft_atoi(const char *str)
+{
+	unsigned char	*c;
+	int				sign;
+	int				dig;
+
+	dig = 0;
+	sign = 1;
+	c = (unsigned char*)str;
+	while (*c == ' ' || *c == '\t' || *c == '\n' || *c == '\v' || *c == '\f'
+	|| *c == '\r')
+		c++;
+	if ((*c == '-') || (*c == '+'))
+	{
+		if (*c == '-')
+			sign *= -1;
+		c++;
+	}
+	while (ft_isdigit(*c))
+	{
+		dig = dig * 10 + *c - '0';
+		c++;
+	}
+	return (dig * sign);
+}
+
+static void			ft_itoa_utils(int n, int *size)
 {
 	while (n /= 10)
 		(*size)++;
 }
 
-static char			*ft_itoa_u(unsigned int n, int precision)
+char				*ft_itoa(int n, int precision)
 {
-	int				size;
-	int				sign;
-	char			*str;
-	char			*strret;
+	int		size;
+	int		sign;
+	char	*str;
+	char	*strret;
 
 	size = 1;
 	sign = n < 0;
-	ft_itoau_utils(n, &size);
+	ft_itoa_utils(n, &size);
 	if (!(str = malloc(sizeof(char) * (size + 1 + precision))))
 		return (NULL);
 	strret = str;
@@ -43,31 +86,4 @@ static char			*ft_itoa_u(unsigned int n, int precision)
 		n /= 10;
 	}
 	return (strret);
-}
-
-void				write_type_u(unsigned int num, t_s s_)
-{
-	int		i;
-	char	*str;
-	char	space;
-	int		sign;
-	int		j;
-
-	str = ft_itoa_u((int)num, s_.preci);
-	sign = (num < 0) ? 1 : 0;
-	space = ' ';
-	if ((s_.flg & FLG_ZERO) && s_.preci < 0)
-		space = '0';
-	j = s_.preci;
-	if (s_.preci != 0)
-		j = ft_strlen(str);
-	i = j + sign;
-	if (!(s_.flg & FLG_MINUS) && (s_.wth))
-		while (i++ < s_.wth)
-			write(1, &space, 1);
-	write(1, str, j);
-	if ((s_.flg & FLG_MINUS) && (s_.wth))
-		while (i++ < s_.wth)
-			write(1, " ", 1);
-	free(str);
 }

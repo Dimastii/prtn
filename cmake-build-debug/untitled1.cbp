@@ -87,6 +87,9 @@
 		<Unit filename="/Users/cveeta/CLionProjects/untitled1/ft_printf_lets_parse.c">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="/Users/cveeta/CLionProjects/untitled1/ft_printf_libutils.c">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/Users/cveeta/CLionProjects/untitled1/ft_printf_utils.c">
 			<Option target="untitled1"/>
 		</Unit>
@@ -117,7 +120,7 @@
 		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_u.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_x_X.c">
+		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_x.c">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/cveeta/CLionProjects/untitled1/CMakeLists.txt">

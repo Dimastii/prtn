@@ -7,6 +7,9 @@ CMakeFiles/untitled1.dir/ft_printf.c.o
 CMakeFiles/untitled1.dir/ft_printf_lets_parse.c.o
  /Users/cveeta/CLionProjects/untitled1/ft_printf.h
  /Users/cveeta/CLionProjects/untitled1/ft_printf_lets_parse.c
+CMakeFiles/untitled1.dir/ft_printf_libutils.c.o
+ /Users/cveeta/CLionProjects/untitled1/ft_printf.h
+ /Users/cveeta/CLionProjects/untitled1/ft_printf_libutils.c
 CMakeFiles/untitled1.dir/ft_printf_utils.c.o
  /Users/cveeta/CLionProjects/untitled1/ft_printf.h
  /Users/cveeta/CLionProjects/untitled1/ft_printf_utils.c
@@ -37,6 +40,6 @@ CMakeFiles/untitled1.dir/write_s.c.o
 CMakeFiles/untitled1.dir/write_u.c.o
  /Users/cveeta/CLionProjects/untitled1/ft_printf.h
  /Users/cveeta/CLionProjects/untitled1/write_u.c
-CMakeFiles/untitled1.dir/write_x_X.c.o
+CMakeFiles/untitled1.dir/write_x.c.o
  /Users/cveeta/CLionProjects/untitled1/ft_printf.h
- /Users/cveeta/CLionProjects/untitled1/write_x_X.c
+ /Users/cveeta/CLionProjects/untitled1/write_x.c

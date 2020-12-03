@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/cveeta/CLionProjects/untitled1/ft_printf.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/ft_printf.c.o"
   "/Users/cveeta/CLionProjects/untitled1/ft_printf_lets_parse.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/ft_printf_lets_parse.c.o"
+  "/Users/cveeta/CLionProjects/untitled1/ft_printf_libutils.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/ft_printf_libutils.c.o"
   "/Users/cveeta/CLionProjects/untitled1/ft_printf_utils.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/ft_printf_utils.c.o"
   "/Users/cveeta/CLionProjects/untitled1/lets_check_what_you_pars.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/lets_check_what_you_pars.c.o"
   "/Users/cveeta/CLionProjects/untitled1/main.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/main.c.o"
@@ -16,7 +17,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/cveeta/CLionProjects/untitled1/write_percent.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/write_percent.c.o"
   "/Users/cveeta/CLionProjects/untitled1/write_s.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/write_s.c.o"
   "/Users/cveeta/CLionProjects/untitled1/write_u.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/write_u.c.o"
-  "/Users/cveeta/CLionProjects/untitled1/write_x_X.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/write_x_X.c.o"
+  "/Users/cveeta/CLionProjects/untitled1/write_x.c" "/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/write_x.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

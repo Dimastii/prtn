@@ -6,13 +6,13 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:08:12 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/03 15:01:15 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/03 17:18:46 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	check_type(char **str, s_s_f **struct_)
+void	check_type(char **str, t_s **struct_)
 {
 	if (**str == 'd')
 		(*struct_)->type = 'd';
@@ -37,7 +37,7 @@ void	check_type(char **str, s_s_f **struct_)
 	++*str;
 }
 
-void	check_reed_precision(char **str, s_s_f **struct_, va_list **ap)
+void	check_reed_precision(char **str, t_s **struct_, va_list **ap)
 {
 	if (**str == '.')
 	{
@@ -59,16 +59,16 @@ void	check_reed_precision(char **str, s_s_f **struct_, va_list **ap)
 	}
 }
 
-void	check_reed_width(char **str, s_s_f **struct_, va_list **ap)
+void	check_reed_width(char **str, t_s **struct_, va_list **ap)
 {
 	if (ft_isdigit(**str) && **str != '0')
 	{
 		(*struct_)->wth = ft_atoi(*str);
-		while (ft_isdigit(**str)) {
+		while (ft_isdigit(**str))
 			++*str;
-		}
 	}
-	if (**str == '*') {
+	if (**str == '*')
+	{
 		(*struct_)->wth = va_arg(**ap, int);
 		++*str;
 	}
@@ -79,7 +79,7 @@ void	check_reed_width(char **str, s_s_f **struct_, va_list **ap)
 	}
 }
 
-void	check_flags(char **str, s_s_f **struct_)
+void	check_flags(char **str, t_s **struct_)
 {
 	if (**str == '-')
 		(*struct_)->flg = (*struct_)->flg | FLG_MINUS;
@@ -96,7 +96,7 @@ void	check_flags(char **str, s_s_f **struct_)
 	++*str;
 }
 
-char	*lets_parse(char *str, s_s_f *struct_, va_list *ap)
+char	*lets_parse(char *str, t_s *struct_, va_list *ap)
 {
 	str++;
 	while (!struct_->type)

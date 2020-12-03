@@ -197,6 +197,33 @@ ft_printf_lets_parse.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ft_printf_lets_parse.c.s
 .PHONY : ft_printf_lets_parse.c.s
 
+ft_printf_libutils.o: ft_printf_libutils.c.o
+
+.PHONY : ft_printf_libutils.o
+
+# target to build an object file
+ft_printf_libutils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ft_printf_libutils.c.o
+.PHONY : ft_printf_libutils.c.o
+
+ft_printf_libutils.i: ft_printf_libutils.c.i
+
+.PHONY : ft_printf_libutils.i
+
+# target to preprocess a source file
+ft_printf_libutils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ft_printf_libutils.c.i
+.PHONY : ft_printf_libutils.c.i
+
+ft_printf_libutils.s: ft_printf_libutils.c.s
+
+.PHONY : ft_printf_libutils.s
+
+# target to generate assembly for a file
+ft_printf_libutils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ft_printf_libutils.c.s
+.PHONY : ft_printf_libutils.c.s
+
 ft_printf_utils.o: ft_printf_utils.c.o
 
 .PHONY : ft_printf_utils.o
@@ -467,32 +494,32 @@ write_u.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_u.c.s
 .PHONY : write_u.c.s
 
-write_x_X.o: write_x_X.c.o
+write_x.o: write_x.c.o
 
-.PHONY : write_x_X.o
+.PHONY : write_x.o
 
 # target to build an object file
-write_x_X.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_x_X.c.o
-.PHONY : write_x_X.c.o
+write_x.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_x.c.o
+.PHONY : write_x.c.o
 
-write_x_X.i: write_x_X.c.i
+write_x.i: write_x.c.i
 
-.PHONY : write_x_X.i
+.PHONY : write_x.i
 
 # target to preprocess a source file
-write_x_X.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_x_X.c.i
-.PHONY : write_x_X.c.i
+write_x.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_x.c.i
+.PHONY : write_x.c.i
 
-write_x_X.s: write_x_X.c.s
+write_x.s: write_x.c.s
 
-.PHONY : write_x_X.s
+.PHONY : write_x.s
 
 # target to generate assembly for a file
-write_x_X.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_x_X.c.s
-.PHONY : write_x_X.c.s
+write_x.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/write_x.c.s
+.PHONY : write_x.c.s
 
 # Help Target
 help:
@@ -509,6 +536,9 @@ help:
 	@echo "... ft_printf_lets_parse.o"
 	@echo "... ft_printf_lets_parse.i"
 	@echo "... ft_printf_lets_parse.s"
+	@echo "... ft_printf_libutils.o"
+	@echo "... ft_printf_libutils.i"
+	@echo "... ft_printf_libutils.s"
 	@echo "... ft_printf_utils.o"
 	@echo "... ft_printf_utils.i"
 	@echo "... ft_printf_utils.s"
@@ -539,9 +569,9 @@ help:
 	@echo "... write_u.o"
 	@echo "... write_u.i"
 	@echo "... write_u.s"
-	@echo "... write_x_X.o"
-	@echo "... write_x_X.i"
-	@echo "... write_x_X.s"
+	@echo "... write_x.o"
+	@echo "... write_x.i"
+	@echo "... write_x.s"
 .PHONY : help
 
 

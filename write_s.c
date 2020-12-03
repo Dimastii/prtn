@@ -6,13 +6,13 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 16:11:24 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/01 17:47:14 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/03 17:17:06 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	write_type_s(char *str, s_s_f struct_)
+void	write_type_s(char *str, t_s struct_)
 {
 	int i;
 

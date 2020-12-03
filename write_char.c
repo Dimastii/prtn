@@ -6,16 +6,16 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 17:30:25 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/01 17:20:06 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/03 17:17:06 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	write_type_char(char c, s_s_f struct_)
+void	write_type_char(char c, t_s struct_)
 {
-	int i;
-	char space;
+	int		i;
+	char	space;
 
 	space = ' ';
 	if (struct_.flg & FLG_ZERO)

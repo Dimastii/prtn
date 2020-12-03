@@ -1,4 +1,4 @@
-void	write_type_d(int num, s_s_f struct_)
+void	write_type_d(int num, t_s struct_)
 {
 	unsigned int i;
 	char *str;
@@ -38,7 +38,7 @@ void	write_type_d(int num, s_s_f struct_)
 
 §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
 
-void	write_type_d(int num, s_s_f struct_)
+void	write_type_d(int num, t_s struct_)
 {
 	unsigned int i;
 	char *str;
@@ -97,7 +97,7 @@ void	write_type_d(int num, s_s_f struct_)
 §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
 
 
-void	write_type_d(int num, s_s_f struct_)
+void	write_type_d(int num, t_s struct_)
 {
 	unsigned int i;
 	char *str;
@@ -168,7 +168,7 @@ void	write_type_d(int num, s_s_f struct_)
 
 #include "ft_printf.h"
 
-void	write_type_d(int num, s_s_f struct_)
+void	write_type_d(int num, t_s struct_)
 {
 	unsigned int i;
 	char *str;
@@ -239,7 +239,7 @@ void	write_type_d(int num, s_s_f struct_)
 
 #include "ft_printf.h"
 
-void	write_type_d(int num, s_s_f struct_)
+void	write_type_d(int num, t_s struct_)
 {
 	unsigned int i;
 	char *str;
@@ -332,7 +332,7 @@ void	write_type_d(int num, s_s_f struct_)
 
 #include "ft_printf.h"
 
-void	write_type_d(int num, s_s_f struct_)
+void	write_type_d(int num, t_s struct_)
 {
 	unsigned int i;
 	char *str;
@@ -423,7 +423,7 @@ void	write_type_d(int num, s_s_f struct_)
 
 #include "ft_printf.h"
 
-void	write_type_d(int num, s_s_f struct_)
+void	write_type_d(int num, t_s struct_)
 {
 	unsigned int i;
 	char *str;

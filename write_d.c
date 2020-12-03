@@ -6,13 +6,13 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 17:41:52 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/03 15:28:10 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/03 17:17:06 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void lets_write_minus_0(char *space, char **str, int num, s_s_f s_)
+static void		lets_write_minus_0(char *space, char **str, int num, t_s s_)
 {
 	*space = ' ';
 	if ((s_.flg & FLG_ZERO) && s_.preci < 0)
@@ -21,34 +21,34 @@ static void lets_write_minus_0(char *space, char **str, int num, s_s_f s_)
 		write(1, " ", 1);
 	if (num > 0 && (s_.flg & FLG_PLUS)
 		&& (((s_.flg & FLG_ZERO) && *str[0] != '0' && !s_.wth)
-			|| ((s_.flg & FLG_ZERO) && (*str[0] == '0' || s_.wth) && s_.preci == -1)))
+	|| ((s_.flg & FLG_ZERO) && (*str[0] == '0' || s_.wth) && s_.preci == -1)))
 		write(1, "+", 1);
 	if (num < 0 && (((s_.flg & FLG_ZERO) && *str[0] != '0' && !s_.wth)
-					|| ((s_.flg & FLG_ZERO) && (*str[0] == '0' || s_.wth) && s_.preci == -1)))
+	|| ((s_.flg & FLG_ZERO) && (*str[0] == '0' || s_.wth) && s_.preci == -1)))
 		write(1, "-", 1);
 }
 
-static void lets_write_minus_1(char **str, int num, s_s_f s_)
+static void		lets_write_minus_1(char **str, int num, t_s s_)
 {
 	if (num > 0 && (s_.flg & FLG_PLUS)
 		&& !(((s_.flg & FLG_ZERO) && *str[0] != '0' && !s_.wth)
-			 || ((s_.flg & FLG_ZERO) && (*str[0] == '0' || s_.wth) && s_.preci == -1)))
+	|| ((s_.flg & FLG_ZERO) && (*str[0] == '0' || s_.wth) && s_.preci == -1)))
 		write(1, "+", 1);
 	if (num < 0 && !(((s_.flg & FLG_ZERO) && *str[0] != '0' && !s_.wth)
-					 || ((s_.flg & FLG_ZERO) && (*str[0] == '0' || s_.wth) && s_.preci == -1)))
+	|| ((s_.flg & FLG_ZERO) && (*str[0] == '0' || s_.wth) && s_.preci == -1)))
 		write(1, "-", 1);
 }
 
-void	write_type_d(int num, s_s_f s_)
+void			write_type_d(int num, t_s s_)
 {
-	int i;
-	char *str;
-	char space;
-	int sign;
-	int j;
+	int		i;
+	char	*str;
+	char	space;
+	int		sign;
+	int		j;
 
 	str = ft_itoa(num, s_.preci);
-	sign = (num < 0)? 1:0;
+	sign = (num < 0) ? 1 : 0;
 	lets_write_minus_0(&space, &str, num, s_);
 	j = s_.preci;
 	if (s_.preci != 0)

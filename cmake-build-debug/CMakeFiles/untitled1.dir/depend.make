@@ -7,6 +7,9 @@ CMakeFiles/untitled1.dir/ft_printf.c.o: ../ft_printf.h
 CMakeFiles/untitled1.dir/ft_printf_lets_parse.c.o: ../ft_printf.h
 CMakeFiles/untitled1.dir/ft_printf_lets_parse.c.o: ../ft_printf_lets_parse.c
 
+CMakeFiles/untitled1.dir/ft_printf_libutils.c.o: ../ft_printf.h
+CMakeFiles/untitled1.dir/ft_printf_libutils.c.o: ../ft_printf_libutils.c
+
 CMakeFiles/untitled1.dir/ft_printf_utils.c.o: ../ft_printf.h
 CMakeFiles/untitled1.dir/ft_printf_utils.c.o: ../ft_printf_utils.c
 
@@ -37,6 +40,6 @@ CMakeFiles/untitled1.dir/write_s.c.o: ../write_s.c
 CMakeFiles/untitled1.dir/write_u.c.o: ../ft_printf.h
 CMakeFiles/untitled1.dir/write_u.c.o: ../write_u.c
 
-CMakeFiles/untitled1.dir/write_x_X.c.o: ../ft_printf.h
-CMakeFiles/untitled1.dir/write_x_X.c.o: ../write_x_X.c
+CMakeFiles/untitled1.dir/write_x.c.o: ../ft_printf.h
+CMakeFiles/untitled1.dir/write_x.c.o: ../write_x.c
 

@@ -6,13 +6,13 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 16:52:25 by cveeta            #+#    #+#             */
-/*   Updated: 2020/11/27 14:51:43 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/03 17:22:06 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	lets_null(s_s_f *struct_)
+void	lets_null(t_s *struct_)
 {
 	struct_->flg = 0;
 	struct_->wth = 0;
@@ -22,21 +22,22 @@ void	lets_null(s_s_f *struct_)
 
 int		ft_printf(const char *str, ...)
 {
-	va_list ap;
-	char  *strTemp;
-	s_s_f struct_;
+	va_list		ap;
+	char		*strtemp;
+	t_s			struct_;
 
-	strTemp = (char*) str;
+	strtemp = (char*)str;
 	va_start(ap, str);
-	while (*strTemp) {
-		if (*strTemp == '%')
+	while (*strtemp)
+	{
+		if (*strtemp == '%')
 		{
 			lets_null(&struct_);
-			strTemp = lets_parse(strTemp, &struct_, &ap);
-			lets_check_what_you_fuck_SpArSiL(&struct_, &ap);
+			strtemp = lets_parse(strtemp, &struct_, &ap);
+			lets_check_what_you_fuck_sparsil(&struct_, &ap);
 		}
 		else
-			write(1, strTemp++, 1);
+			write(1, strtemp++, 1);
 	}
 	va_end(ap);
 	return (0);
