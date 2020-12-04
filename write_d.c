@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 17:41:52 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/03 17:17:06 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/04 17:42:26 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ static void		lets_write_minus_0(char *space, char **str, int num, t_s s_)
 	if (num < 0 && (((s_.flg & FLG_ZERO) && *str[0] != '0' && !s_.wth)
 	|| ((s_.flg & FLG_ZERO) && (*str[0] == '0' || s_.wth) && s_.preci == -1)))
 		write(1, "-", 1);
+	_ret++;
 }
 
 static void		lets_write_minus_1(char **str, int num, t_s s_)
@@ -37,6 +38,7 @@ static void		lets_write_minus_1(char **str, int num, t_s s_)
 	if (num < 0 && !(((s_.flg & FLG_ZERO) && *str[0] != '0' && !s_.wth)
 	|| ((s_.flg & FLG_ZERO) && (*str[0] == '0' || s_.wth) && s_.preci == -1)))
 		write(1, "-", 1);
+	_ret++;
 }
 
 void			write_type_d(int num, t_s s_)
@@ -56,11 +58,12 @@ void			write_type_d(int num, t_s s_)
 	i = j + sign;
 	if (!(s_.flg & FLG_MINUS) && (s_.wth))
 		while (i++ < s_.wth)
-			write(1, &space, 1);
-	lets_write_minus_1(&str, num, s_);
+			ft_putchar(space);
+			lets_write_minus_1(&str, num, s_);
 	write(1, str, j);
 	if ((s_.flg & FLG_MINUS) && (s_.wth))
 		while (i++ < s_.wth)
-			write(1, " ", 1);
+			ft_putchar(' ');
+	_ret += j;
 	free(str);
 }

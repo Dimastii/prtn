@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled1.dir/ft_printf_lets_parse.c.o"
   "CMakeFiles/untitled1.dir/ft_printf_libutils.c.o"
   "CMakeFiles/untitled1.dir/ft_printf_utils.c.o"
+  "CMakeFiles/untitled1.dir/ft_putchar.c.o"
   "CMakeFiles/untitled1.dir/lets_check_what_you_pars.c.o"
   "CMakeFiles/untitled1.dir/main.c.o"
   "CMakeFiles/untitled1.dir/write_char.c.o"

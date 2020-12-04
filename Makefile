@@ -12,11 +12,11 @@
 
 NAME	= libftprintf.a
 CC      = gcc
-CFLAGS  = -Wall -Wextra -Werror
+#CFLAGS  = -Wall -Wextra -Werror
 RM	= rm -f
 SRCS	=	ft_printf_lets_parse.c ft_printf_utils.c ft_printf.c ft_printf_libutils.c \
             lets_check_what_you_pars.c write_s.c write_percent.c write_char.c \
-            write_d.c write_i.c write_x.c write_u.c write_p.c
+            write_d.c write_i.c write_x.c write_u.c write_p.c ft_putchar.c
 OBJ	= $(SRCS:.c=.o)
 BONUS_OBJ	= $(BONUS:.c=.o)
 all:	$(NAME)

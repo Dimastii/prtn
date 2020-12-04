@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 16:52:25 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/03 17:22:06 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/04 17:58:00 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int		ft_printf(const char *str, ...)
 	char		*strtemp;
 	t_s			struct_;
 
+	_ret = 0;
 	strtemp = (char*)str;
 	va_start(ap, str);
 	while (*strtemp)
@@ -37,8 +38,9 @@ int		ft_printf(const char *str, ...)
 			lets_check_what_you_fuck_sparsil(&struct_, &ap);
 		}
 		else
-			write(1, strtemp++, 1);
+			ft_putchar(*strtemp++);
+
 	}
 	va_end(ap);
-	return (0);
+	return (_ret);
 }

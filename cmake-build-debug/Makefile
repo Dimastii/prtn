@@ -251,6 +251,33 @@ ft_printf_utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ft_printf_utils.c.s
 .PHONY : ft_printf_utils.c.s
 
+ft_putchar.o: ft_putchar.c.o
+
+.PHONY : ft_putchar.o
+
+# target to build an object file
+ft_putchar.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ft_putchar.c.o
+.PHONY : ft_putchar.c.o
+
+ft_putchar.i: ft_putchar.c.i
+
+.PHONY : ft_putchar.i
+
+# target to preprocess a source file
+ft_putchar.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ft_putchar.c.i
+.PHONY : ft_putchar.c.i
+
+ft_putchar.s: ft_putchar.c.s
+
+.PHONY : ft_putchar.s
+
+# target to generate assembly for a file
+ft_putchar.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ft_putchar.c.s
+.PHONY : ft_putchar.c.s
+
 lets_check_what_you_pars.o: lets_check_what_you_pars.c.o
 
 .PHONY : lets_check_what_you_pars.o
@@ -542,6 +569,9 @@ help:
 	@echo "... ft_printf_utils.o"
 	@echo "... ft_printf_utils.i"
 	@echo "... ft_printf_utils.s"
+	@echo "... ft_putchar.o"
+	@echo "... ft_putchar.i"
+	@echo "... ft_putchar.s"
 	@echo "... lets_check_what_you_pars.o"
 	@echo "... lets_check_what_you_pars.i"
 	@echo "... lets_check_what_you_pars.s"

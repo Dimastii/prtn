@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 18:59:51 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/03 18:38:09 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/04 17:57:38 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@
 
 	int qqq =   -8141;
 	int hex = 1024;
-	printf("this %0*s number\n",0, "1");
-	ft_printf("this %0*s number\n",0, "1");
+	//printf("this %0*s number\n",0, "1");
+	ft_printf("%.s", "17");
+
+	printf("\n%d\n",_ret);
 }

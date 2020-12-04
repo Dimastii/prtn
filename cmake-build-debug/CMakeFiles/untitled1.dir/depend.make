@@ -13,6 +13,9 @@ CMakeFiles/untitled1.dir/ft_printf_libutils.c.o: ../ft_printf_libutils.c
 CMakeFiles/untitled1.dir/ft_printf_utils.c.o: ../ft_printf.h
 CMakeFiles/untitled1.dir/ft_printf_utils.c.o: ../ft_printf_utils.c
 
+CMakeFiles/untitled1.dir/ft_putchar.c.o: ../ft_printf.h
+CMakeFiles/untitled1.dir/ft_putchar.c.o: ../ft_putchar.c
+
 CMakeFiles/untitled1.dir/lets_check_what_you_pars.c.o: ../ft_printf.h
 CMakeFiles/untitled1.dir/lets_check_what_you_pars.c.o: ../lets_check_what_you_pars.c
 

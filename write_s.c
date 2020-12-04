@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 16:11:24 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/03 17:18:46 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/04 18:02:36 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,11 @@ void	write_type_s(char *str, t_s struct_)
 	i = struct_.preci;
 	if (!(struct_.flg & FLG_MINUS) && (struct_.wth))
 		while (i++ < struct_.wth)
-			write(1, &space, 1);
+			ft_putchar(space);
 	write(1, str, struct_.preci);
 	if ((struct_.flg & FLG_MINUS) && (struct_.wth))
 		while (i++ < struct_.wth)
-			write(1, " ", 1);
+			ft_putchar(' ');
+	if (struct_.preci)
+	_ret += (int)ft_strlen(str);
 }

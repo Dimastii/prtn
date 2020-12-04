@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 12:25:38 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/03 17:50:51 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/04 17:42:16 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@
 # include "stdio.h"
 # include "stdlib.h"
 # include "unistd.h"
+
+int _ret;
 
 typedef struct	s_list
 {
@@ -51,4 +53,5 @@ void			write_type_i(int num, t_s s_);
 void			write_type_x(unsigned int num, t_s s_, int mode);
 void			write_type_u(unsigned int num, t_s s_);
 void			write_type_p(unsigned long long int num, t_s s_);
+void 			ft_putchar(char c);
 #endif
