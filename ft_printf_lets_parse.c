@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:08:12 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/03 17:18:46 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/05 19:51:03 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,16 @@ void	check_reed_precision(char **str, t_s **struct_, va_list **ap)
 				(*struct_)->preci = -1;
 			++*str;
 		}
-		else if (ft_isdigit(**str))
-		{
+		else if (ft_isdigit(**str)) {
 			(*struct_)->preci = ft_atoi(*str);
 			while (ft_isdigit(**str))
 				++*str;
 		}
 		else
+		{
 			(*struct_)->preci = 0;
+			++*str;
+		}
 	}
 }
 

@@ -54,4 +54,6 @@ void			write_type_x(unsigned int num, t_s s_, int mode);
 void			write_type_u(unsigned int num, t_s s_);
 void			write_type_p(unsigned long long int num, t_s s_);
 void 			ft_putchar(char c);
+void 			ft_putstr(char* c, int count);
+
 #endif

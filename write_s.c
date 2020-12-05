@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 16:11:24 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/04 18:02:36 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/05 18:51:05 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,8 @@ void	write_type_s(char *str, t_s struct_)
 		while (i++ < struct_.wth)
 			ft_putchar(' ');
 	if (struct_.preci)
-	_ret += (int)ft_strlen(str);
+		if (struct_.preci < (int)ft_strlen(str))
+			_ret += struct_.preci;
+		else
+			_ret += (int)ft_strlen(str);
 }

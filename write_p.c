@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 20:27:32 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/03 17:18:46 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/05 19:22:15 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,13 @@ void	write_type_p(unsigned long long int num, t_s s_)
 	i = j + sign;
 	if (!(s_.flg & FLG_MINUS) && (s_.wth))
 		while (i++ < s_.wth - 2)
-			write(1, &space, 1);
+			ft_putchar(space);
 	if (str)
-		write(1, "0x", 2);
+		ft_putstr("0x", 2);
 	write(1, str, j);
 	if ((s_.flg & FLG_MINUS) && (s_.wth))
 		while (i++ < s_.wth - 2)
-			write(1, " ", 1);
+			ft_putchar(' ');
+	_ret += j;
 	free(str);
 }

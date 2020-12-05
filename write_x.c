@@ -31,10 +31,11 @@ void	write_type_x(unsigned int num, t_s s_, int mode)
 	i = j + sign;
 	if (!(s_.flg & FLG_MINUS) && (s_.wth))
 		while (i++ < s_.wth)
-			write(1, &space, 1);
+			ft_putchar(space);
 	write(1, str, j);
 	if ((s_.flg & FLG_MINUS) && (s_.wth))
 		while (i++ < s_.wth)
-			write(1, " ", 1);
+			ft_putchar(' ');
+	_ret += j;
 	free(str);
 }

@@ -25,9 +25,9 @@ void	write_type_percent(t_s struct_)
 	i = struct_.preci;
 	if (!(struct_.flg & FLG_MINUS) && (struct_.wth))
 		while (i++ < struct_.wth)
-			write(1, &space, 1);
-	write(1, "%", 1);
+			ft_putchar(space);
+	ft_putchar('%');
 	if ((struct_.flg & FLG_MINUS) && (struct_.wth))
 		while (i++ < struct_.wth)
-			write(1, " ", 1);
+			ft_putchar(' ');
 }

@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 17:41:52 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/04 17:42:26 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/05 18:42:56 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,14 @@ static void		lets_write_minus_0(char *space, char **str, int num, t_s s_)
 	if ((s_.flg & FLG_ZERO) && s_.preci < 0)
 		*space = '0';
 	if ((s_.flg & FLG_SPACE) && (num > 0) && !(s_.flg & FLG_PLUS))
-		write(1, " ", 1);
+		ft_putchar(' ');
 	if (num > 0 && (s_.flg & FLG_PLUS)
 		&& (((s_.flg & FLG_ZERO) && *str[0] != '0' && !s_.wth)
 	|| ((s_.flg & FLG_ZERO) && (*str[0] == '0' || s_.wth) && s_.preci == -1)))
-		write(1, "+", 1);
+		ft_putchar('+');
 	if (num < 0 && (((s_.flg & FLG_ZERO) && *str[0] != '0' && !s_.wth)
 	|| ((s_.flg & FLG_ZERO) && (*str[0] == '0' || s_.wth) && s_.preci == -1)))
-		write(1, "-", 1);
-	_ret++;
+		ft_putchar('-');
 }
 
 static void		lets_write_minus_1(char **str, int num, t_s s_)
@@ -34,11 +33,10 @@ static void		lets_write_minus_1(char **str, int num, t_s s_)
 	if (num > 0 && (s_.flg & FLG_PLUS)
 		&& !(((s_.flg & FLG_ZERO) && *str[0] != '0' && !s_.wth)
 	|| ((s_.flg & FLG_ZERO) && (*str[0] == '0' || s_.wth) && s_.preci == -1)))
-		write(1, "+", 1);
+		ft_putchar('+');
 	if (num < 0 && !(((s_.flg & FLG_ZERO) && *str[0] != '0' && !s_.wth)
 	|| ((s_.flg & FLG_ZERO) && (*str[0] == '0' || s_.wth) && s_.preci == -1)))
-		write(1, "-", 1);
-	_ret++;
+		ft_putchar('-');
 }
 
 void			write_type_d(int num, t_s s_)

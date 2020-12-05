@@ -6,7 +6,7 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 19:54:10 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/03 17:55:18 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/05 18:52:04 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,11 @@ void				write_type_u(unsigned int num, t_s s_)
 	i = j + sign;
 	if (!(s_.flg & FLG_MINUS) && (s_.wth))
 		while (i++ < s_.wth)
-			write(1, &space, 1);
+			ft_putchar(space);
 	write(1, str, j);
 	if ((s_.flg & FLG_MINUS) && (s_.wth))
 		while (i++ < s_.wth)
-			write(1, " ", 1);
+			ft_putchar(' ');
+	_ret += j;
 	free(str);
 }
