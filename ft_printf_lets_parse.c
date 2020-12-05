@@ -6,13 +6,13 @@
 /*   By: cveeta <cveeta@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:08:12 by cveeta            #+#    #+#             */
-/*   Updated: 2020/12/05 19:51:03 by cveeta           ###   ########.fr       */
+/*   Updated: 2020/12/05 20:16:42 by cveeta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	check_type(char **str, t_s **struct_)
+int		check_type(char **str, t_s **struct_)
 {
 	if (**str == 'd')
 		(*struct_)->type = 'd';
@@ -33,11 +33,12 @@ void	check_type(char **str, t_s **struct_)
 	else if (**str == 'u')
 		(*struct_)->type = 'u';
 	else
-		return ;
+		return (0);
 	++*str;
+	return (1);
 }
 
-void	check_reed_precision(char **str, t_s **struct_, va_list **ap)
+int		check_reed_precision(char **str, t_s **struct_, va_list **ap)
 {
 	if (**str == '.')
 	{
@@ -54,15 +55,17 @@ void	check_reed_precision(char **str, t_s **struct_, va_list **ap)
 				++*str;
 		}
 		else
-		{
 			(*struct_)->preci = 0;
-			++*str;
-		}
+		return (1);
 	}
+	return (0);
 }
 
-void	check_reed_width(char **str, t_s **struct_, va_list **ap)
+int		check_reed_width(char **str, t_s **struct_, va_list **ap)
 {
+	char *ret;
+
+	ret = *str;
 	if (ft_isdigit(**str) && **str != '0')
 	{
 		(*struct_)->wth = ft_atoi(*str);
@@ -79,9 +82,10 @@ void	check_reed_width(char **str, t_s **struct_, va_list **ap)
 		(*struct_)->flg = (*struct_)->flg | FLG_MINUS;
 		(*struct_)->wth *= -1;
 	}
+	return((int)(*str - ret));
 }
 
-void	check_flags(char **str, t_s **struct_)
+int		check_flags(char **str, t_s **struct_)
 {
 	if (**str == '-')
 		(*struct_)->flg = (*struct_)->flg | FLG_MINUS;
@@ -94,8 +98,9 @@ void	check_flags(char **str, t_s **struct_)
 	else if (**str == '+')
 		(*struct_)->flg = (*struct_)->flg | FLG_PLUS;
 	else
-		return ;
+		return (0);
 	++*str;
+	return (1);
 }
 
 char	*lets_parse(char *str, t_s *struct_, va_list *ap)
@@ -103,10 +108,11 @@ char	*lets_parse(char *str, t_s *struct_, va_list *ap)
 	str++;
 	while (!struct_->type)
 	{
-		check_flags(&str, &struct_);
-		check_reed_width(&str, &struct_, &ap);
-		check_reed_precision(&str, &struct_, &ap);
-		check_type(&str, &struct_);
+		if (!(check_flags(&str, &struct_) +
+		check_reed_width(&str, &struct_, &ap) +
+		check_reed_precision(&str, &struct_, &ap) +
+		check_type(&str, &struct_) != 0))
+			str++;
 	}
 	return (str);
 }
