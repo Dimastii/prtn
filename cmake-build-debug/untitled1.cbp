@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/cveeta/CLionProjects/untitled1/cmake-build-debug"/>
+				<Option working_dir="/Users/cveeta/Desktop/123/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/cveeta/CLionProjects/untitled1/cmake-build-debug"/>
+				<Option working_dir="/Users/cveeta/Desktop/123/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/cveeta/CLionProjects/untitled1/cmake-build-debug"/>
+				<Option working_dir="/Users/cveeta/Desktop/123/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled1">
-				<Option output="/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/untitled1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/cveeta/CLionProjects/untitled1/cmake-build-debug"/>
+				<Option output="/Users/cveeta/Desktop/123/cmake-build-debug/untitled1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/cveeta/Desktop/123/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -51,15 +51,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled1"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled1"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled1/fast">
-				<Option output="/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/untitled1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/cveeta/CLionProjects/untitled1/cmake-build-debug"/>
+				<Option output="/Users/cveeta/Desktop/123/cmake-build-debug/untitled1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/cveeta/Desktop/123/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -71,62 +71,62 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled1/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled1/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/cveeta/Desktop/123/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/ft_printf.c">
+		<Unit filename="/Users/cveeta/Desktop/123/ft_printf.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/ft_printf.h">
+		<Unit filename="/Users/cveeta/Desktop/123/ft_printf.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/ft_printf_lets_parse.c">
+		<Unit filename="/Users/cveeta/Desktop/123/ft_printf_lets_parse.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/ft_printf_libutils.c">
+		<Unit filename="/Users/cveeta/Desktop/123/ft_printf_libutils.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/ft_printf_utils.c">
+		<Unit filename="/Users/cveeta/Desktop/123/ft_printf_utils.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/ft_putchar.c">
+		<Unit filename="/Users/cveeta/Desktop/123/ft_putchar.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/lets_check_what_you_pars.c">
+		<Unit filename="/Users/cveeta/Desktop/123/lets_check_what_you_pars.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/main.c">
+		<Unit filename="/Users/cveeta/Desktop/123/main.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_char.c">
+		<Unit filename="/Users/cveeta/Desktop/123/write_char.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_d.c">
+		<Unit filename="/Users/cveeta/Desktop/123/write_d.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_i.c">
+		<Unit filename="/Users/cveeta/Desktop/123/write_i.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_p.c">
+		<Unit filename="/Users/cveeta/Desktop/123/write_p.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_percent.c">
+		<Unit filename="/Users/cveeta/Desktop/123/write_percent.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_s.c">
+		<Unit filename="/Users/cveeta/Desktop/123/write_s.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_u.c">
+		<Unit filename="/Users/cveeta/Desktop/123/write_u.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/write_x.c">
+		<Unit filename="/Users/cveeta/Desktop/123/write_x.c">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/cveeta/CLionProjects/untitled1/CMakeLists.txt">
+		<Unit filename="/Users/cveeta/Desktop/123/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

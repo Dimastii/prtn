@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/cveeta/CLionProjects/untitled1/ft_printf.h
+/Users/cveeta/Desktop/123/ft_printf.h
 stdarg.h
-/Users/cveeta/CLionProjects/untitled1/stdarg.h
+/Users/cveeta/Desktop/123/stdarg.h
 stdio.h
-/Users/cveeta/CLionProjects/untitled1/stdio.h
+/Users/cveeta/Desktop/123/stdio.h
 stdlib.h
-/Users/cveeta/CLionProjects/untitled1/stdlib.h
+/Users/cveeta/Desktop/123/stdlib.h
 unistd.h
-/Users/cveeta/CLionProjects/untitled1/unistd.h
+/Users/cveeta/Desktop/123/unistd.h
 
-/Users/cveeta/CLionProjects/untitled1/ft_printf_lets_parse.c
+/Users/cveeta/Desktop/123/write_d.c
 ft_printf.h
-/Users/cveeta/CLionProjects/untitled1/ft_printf.h
+/Users/cveeta/Desktop/123/ft_printf.h
 

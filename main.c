@@ -44,7 +44,7 @@
 	int qqq =   -8141;
 	int hex = 1024;
 	//printf("this %0*s number\n",0, "1");
-	printf("%.s\n", "hello");
-	ft_printf("%.s\n", "hello");
+	printf("%.d\n", "hello");
+	ft_printf("%.d\n", "hello");
 	//printf("\n%d_%d\n",_ret, );
 }

@@ -26,8 +26,10 @@ void	write_type_x(unsigned int num, t_s s_, int mode)
 	if ((s_.flg & FLG_ZERO) && s_.preci < 0)
 		space = '0';
 	j = s_.preci;
-	if (s_.preci != 0)
-		j = ft_strlen(str);
+    if (s_.preci != 0)
+        j = ft_strlen(str);
+    else if (num != 0)
+        j = ft_strlen(str);
 	i = j + sign;
 	if (!(s_.flg & FLG_MINUS) && (s_.wth))
 		while (i++ < s_.wth)

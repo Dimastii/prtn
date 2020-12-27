@@ -51,8 +51,10 @@ void			write_type_i(int num, t_s s_)
 	sign = (num < 0) ? 1 : 0;
 	lets_write_minus_0(&space, &str, num, s_);
 	j = s_.preci;
-	if (s_.preci != 0)
-		j = ft_strlen(str);
+    if (s_.preci != 0)
+        j = ft_strlen(str);
+    else if (num != 0)
+        j = ft_strlen(str);
 	i = j + sign;
 	if (!(s_.flg & FLG_MINUS) && (s_.wth))
 		while (i++ < s_.wth)
